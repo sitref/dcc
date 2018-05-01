@@ -536,8 +536,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item name="bottledWater"/>
 			<item name="goldenRodTea"/>
 			<item name="redTea"/>
-			<item name="MacceruTea" />
-			<item name="Schmidtbier" />
 			<item name="coffee"/>
 			<item name="beer"/>
 			<item name="grainAlcohol"/>
@@ -700,7 +698,6 @@ quality_mod: adjusts the price range of all items with a quality level.
 			<item group="ammoSupplies" count="2"/>
 			<item name="potassiumNitratePowder" count="2,5"/> <!-- 10 -->
 			<item name="antibioticsRecipe" /> 
-			<item name="steelPolish" count="1,3"
 		</trader_item_group>
 
 		<trader_item_group name="traderGeneral" count="1">
@@ -988,8 +985,6 @@ workstations
 			<item name="bottledWater" count="0,2"/>
 			<item name="goldenRodTea" count="0,1"/>
 			<item name="redTea" count="0,1"/>
-			<item name="MacceruTea" count="1,2"/>
-			<item name="Schmidtbier" count="1,2"/>
 			<item name="coffee" count="0,1"/>
 			<item name="beer" count="3,5"/>
 			<item name="canMiso" count="0,2"/>

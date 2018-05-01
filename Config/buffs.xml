@@ -272,21 +272,21 @@ The "MetabolizeBeer" buff will slowly reduce the beer variable.
 
 <buff id="smelly" duration="30" smell="largeSmell" icon="ui_game_symbol_dysentery" name_key="smelly" description_key="smellyDesc" tooltip_key="smellyTooltip"/>
 
-<buff id="infection" mutex="cured,infection1,infection2,infection3,infection4" duration="900" onexpired="infection1" type="sickness"
+<buff id="infection" mutex="cured,infection1,infection2,infection3,infection4" duration="1200" onexpired="infection1" type="sickness"
 	icon="ui_game_symbol_infection" name_key="infection" description_key="infectionDesc" tooltip_key="infectionTooltip" cures="foodHoney,antibiotics,herbalAntibiotics">
 </buff>
 
-<buff id="infection1" duration="900" actions="debuff(infection)" onexpired="infection2" type="sickness"
+<buff id="infection1" duration="1200" actions="debuff(infection)" onexpired="infection2" type="sickness"
 	icon="ui_game_symbol_infection" name_key="infection1" description_key="infection1Desc" tooltip_key="infection1Tooltip" cures="antibiotics,herbalAntibiotics">
 	<modify id="0" stat="stamina" amount="-0.3" rate="1"/>
 </buff>
 
-<buff id="infection2" duration="900" actions="damage(25,2100t,0,3);increment(@wellness, -0.25, 100t, 0, 0);debuff(infection);debuff(infection1)" onexpired="infection3" type="sickness"
+<buff id="infection2" duration="1200" actions="damage(25,2100t,0,3);increment(@wellness, -0.25, 100t, 0, 0);debuff(infection);debuff(infection1)" onexpired="infection3" type="sickness"
 	icon="ui_game_symbol_infection" name_key="infection2" description_key="infection2Desc" tooltip_key="infection2Tooltip" cures="antibiotics">
 	<modify id="0" stat="stamina" amount="-1" rate="2"/>
 </buff>
 
-<buff id="infection3" duration="300" actions="damage(25,800t,0,3);increment(@wellness, -0.25, 100t, 0, 0);debuff(infection);debuff(infection1);debuff(infection2)" onexpired="infection4" type="sickness"
+<buff id="infection3" duration="600" actions="damage(25,800t,0,3);increment(@wellness, -0.25, 100t, 0, 0);debuff(infection);debuff(infection1);debuff(infection2)" onexpired="infection4" type="sickness"
 	icon="ui_game_symbol_infection" name_key="infection3" description_key="infection3Desc" tooltip_key="infection3Tooltip" cures="antibiotics">
 	<modify id="0" stat="stamina" amount="-2" rate="2"/>
 	<modify id="1" stat="health" amount="-1" rate="5"/>
@@ -340,7 +340,7 @@ icon="ui_game_symbol_pills" name_key="painkillersBuffName" description_key="pain
 	<modify id="1" stat="health" amount="-15" rate="1"/>
 </buff>
 
-<buff id="brokenLeg" duration="10000" ondebuff="healingbrokenLeg" stack="reset" actions="debuff(firstAid);debuff(splint);debuff(sprainedLeg);debuff(healingbrokenLeg)" type="speedmodifier" icon="ui_game_symbol_brokenbone" name_key="brokenLeg" description_key="brokenLegDesc" tooltip_key="brokenLegTooltip" cures="splint">
+<buff id="brokenLeg" duration="10000" ondebuff="healingbrokenLeg" stack="reset" actions="debuff(firstAid);debuff(splint);debuff(sprainedLeg);debuff(healingbrokenLeg);debuff(improvedsplint)" type="speedmodifier" icon="ui_game_symbol_brokenbone" name_key="brokenLeg" description_key="brokenLegDesc" tooltip_key="brokenLegTooltip" cures="splint">
 	<modify id="0" stat="speedmodifier" mulValue="0.6"/>
 </buff>
 
@@ -348,14 +348,21 @@ icon="ui_game_symbol_pills" name_key="painkillersBuffName" description_key="pain
 	<modify id="0" stat="speedmodifier" mulValue="0.7"/>
 </buff>
 
-<buff id="splint" overrides="brokenLeg,sprainedLeg" type="speedmodifier" overrideicon="true" icon="ui_game_symbol_splint" name_key="splintedLeg" description_key="splintedLegDesc" tooltip_key="splintedLegTooltip">
+<buff id="splint" overrides="brokenLeg,sprainedLeg,healingbrokenLeg" type="speedmodifier" overrideicon="true" icon="ui_game_symbol_splint" name_key="splintedLeg" description_key="splintedLegDesc" tooltip_key="splintedLegTooltip">
 	<modify id="0" stat="speedmodifier" mulValue="1.2"/>
 	<modify id="1" buff="brokenLeg" tickrate="2"/>
 	<modify id="2" buff="sprainedLeg" tickrate="2"/>
 	<modify id="3" buff="healingbrokenLeg" tickrate="2"/>
 </buff>
 
-<buff id="sprainedLeg" mutex="brokenLeg" type="speedmodifier" duration="2400" actions="debuff(firstAid);debuff(splint)" icon="ui_game_symbol_brokenbone" name_key="sprainedLeg" description_key="sprainedLegDesc" tooltip_key="sprainedLegTooltip" cures="splint">
+<buff id="improvedsplint" overrides="brokenLeg,sprainedLeg,healingbrokenLeg,splint" type="speedmodifier" overrideicon="true" icon="ui_game_symbol_splint" name_key="splintedLeg" description_key="splintedLegDesc" tooltip_key="splintedLegTooltip">
+	<modify id="0" stat="speedmodifier" mulValue="1.2"/>
+	<modify id="1" buff="brokenLeg" tickrate="3"/>
+	<modify id="2" buff="sprainedLeg" tickrate="5"/>
+	<modify id="3" buff="healingbrokenLeg" tickrate="4"/>
+</buff>
+
+<buff id="sprainedLeg" mutex="brokenLeg" type="speedmodifier" duration="2400" actions="debuff(firstAid);debuff(splint);debuff(improvedsplint)" icon="ui_game_symbol_brokenbone" name_key="sprainedLeg" description_key="sprainedLegDesc" tooltip_key="sprainedLegTooltip" cures="splint">
 	<modify id="0" stat="speedmodifier" mulValue="0.80"/>
 </buff>
 
@@ -504,16 +511,13 @@ actions="debuff(burningSmall);attach(ParticleEffects/p_onFire, @impact);damage(0
 </buff>
 
 <buff id="asphaltStaBoostTrigger" duration="1" actions="setvar(CTRroadrun, 10)" />
-<buff id="asphaltStaminaEffect" duration="0" buffif="CTRroadrun greater 0" debuffif="CTRroadrun less 1" actions="increment(CTRroadrun, -1, 1, 0, 0)" >
-	<modify id="0" stat="stamina" amount="1" rate="2"/>
-	<modify id="1" stat="speedmodifier" mulValue="1.2"/>
-</buff>
-<!-- GTC
+
 <buff id="asphaltStaminaEffect" duration="0" buffif="CTRroadrun greater 0" debuffif="CTRroadrun less 1" actions="increment(CTRroadrun, -1, 1, 0, 0)"
 	icon="ui_game_symbol_run" name_key="Road Runner" description_key="Meep meep!" tooltip_key="Meep meep!">
 	<modify id="0" stat="stamina" amount="1" rate="1"/>
-</buff>
--->
+	<modify id="0" stat="speedmodifier" mulValue="1.1"/>
+				</buff>
+
 
 <buff id="critGunMP5" duration="1" castsound="Buffs/critical_blunt" >
 	<modify id="1" stat="health" amount="-100" rate="1"/>

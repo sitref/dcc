@@ -124,7 +124,7 @@
 	<quest id="challenge_silenceofthelambs" name_key="challenge_silenceofthelambs" subtitle_key="challenge_silenceofthelambs_subtitle" description_key="challenge_silenceofthelambs_offer" icon="ui_game_symbol_zombie"
 	repeatable="true" category_key="challenge" offer_key="challenge_silenceofthelambs_offer" difficulty="insane" >
 		<objective type="Time" value="1200" optional="true" />
-		<objective type="ZombieKill" id="zombieScreamer,zombieScreamerFeral" value="3" />
+		<objective type="ZombieKill" id="zombieScreamer,zombieScreamerFeral,zombieScreamerFeralRadiated,zombieScreamerRadiated" value="3" />
 
 		<reward type="SkillPoints" value="2" />
 		<reward type="SkillPoints" value="1" optional="true" />
@@ -150,7 +150,7 @@
 		repeatable="true" category_key="challenge" offer_key="challenge_nurseyoubacktohealth_offer" difficulty="medium" >
 
 		<objective type="Time" value="900" optional="true" />
-		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral" value="3" />
+		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombieNurseFeralRadiated" value="3" />
 
 		<reward type="SkillPoints" value="2" />
 		<reward type="SkillPoints" value="1" optional="true" />
@@ -159,7 +159,7 @@
 	<quest id="challenge_copanattitude" name_key="challenge_copanattitude" subtitle_key="challenge_copanattitude_subtitle" description_key="challenge_copanattitude_offer" icon="ui_game_symbol_zombie"
 		repeatable="true" category_key="challenge" offer_key="challenge_copanattitude_offer" difficulty="hard">
 		<objective type="Time" value="1500" optional="true" />
-		<objective type="ZombieKill" id="zombieFatCop,zombieFatCopFeral,zombieFatCopFeralRadiated" value="2" />
+		<objective type="ZombieKill" id="zombieFatCop,zombieFatCopFeral,zombieFatCopFeralRadiated,zombieFatCopRadiated" value="2" />
 
 		<reward type="SkillPoints" value="2" />
 		<reward type="SkillPoints" value="1" optional="true" />
@@ -168,7 +168,7 @@
 	<quest id="challenge_dogdaysareover" name_key="challenge_dogdaysareover" subtitle_key="challenge_dogdaysareover_subtitle" description_key="challenge_dogdaysareover_offer" icon="ui_game_symbol_zombie"
 		repeatable="true" category_key="challenge" offer_key="challenge_dogdaysareover_offer" difficulty="hard">
 		<objective type="Time" value="1500" optional="true" />
-		<objective type="ZombieKill" id="animalZombieDog" value="4" />
+		<objective type="ZombieKill" id="animalZombieDog,animalZombieDograd" value="4" />
 
 		<reward type="SkillPoints" value="2" />
 		<reward type="SkillPoints" value="1" optional="true" />
@@ -177,7 +177,7 @@
 	<quest id="challenge_itsybitsyspider" name_key="challenge_itsybitsyspider" subtitle_key="challenge_itsybitsyspider_subtitle" description_key="challenge_itsybitsyspider_offer" icon="ui_game_symbol_zombie"
 		repeatable="true" category_key="challenge" offer_key="challenge_itsybitsyspider_offer" difficulty="medium">
 		<objective type="Time" value="900" optional="true" />
-		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderFeralRadiated" value="3" />
+		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderFeralRadiated,zombieSpiderRadiated" value="3" />
 
 		<reward type="SkillPoints" value="2" />
 		<reward type="SkillPoints" value="1" optional="true" />
@@ -189,7 +189,7 @@
 		<objective type="ZombieKill" id="zombieArlene,zombieArleneFeral" value="1" />
 		<objective type="ZombieKill" id="zombieDarlene,zombieDarleneFeral" value="1" />
 		<objective type="ZombieKill" id="zombieMarlene,zombieMarleneFeral" value="1" />
-		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral" value="1" />
+		<objective type="ZombieKill" id="zombieNurse,zombieNurseFeral,zombieNurseRadiated,zombieNurseFeralRadiated" value="1" />
 
 		<reward type="SkillPoints" value="2" />
 		<reward type="SkillPoints" value="1" optional="true" />
@@ -212,10 +212,10 @@
 	<quest id="challenge_yournothingspecial" name_key="challenge_yournothingspecial" subtitle_key="challenge_yournothingspecial_subtitle" description_key="challenge_yournothingspecial_offer" icon="ui_game_symbol_zombie"
 		repeatable="true" category_key="challenge" offer_key="challenge_yournothingspecial_offer" difficulty="insane">
 		<objective type="Time" value="1800" optional="true" />
-		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderFeralRadiated" value="1" />
-		<objective type="ZombieKill" id="zombieFatCop,zombieFatCopFeral,zombieFatCopFeralRadiated" value="1" />
+		<objective type="ZombieKill" id="zombieSpider,zombieSpiderFeral,zombieSpiderFeralRadiated,zombieSpiderRadiated" value="1" />
+		<objective type="ZombieKill" id="zombieFatCop,zombieFatCopFeral,zombieFatCopFeralRadiated,zombieFatCopRadiated" value="1" />
 		<objective type="ZombieKill" id="zombieWightFeral,zombieWightFeralRadiated" value="1" />
-		<objective type="ZombieKill" id="zombieScreamer,zombieScreamerFeral" value="1" />
+		<objective type="ZombieKill" id="zombieScreamer,zombieScreamerFeral,zombieScreamerFeralRadiated,zombieScreamerRadiated" value="1" />
 		<objective type="ZombieKill" id="zombieBurnt" value="1" />
 
 		<reward type="SkillPoints" value="2" />
@@ -226,11 +226,12 @@
 		repeatable="true" category_key="challenge" offer_key="challenge_imalumberjackandimokay_offer" difficulty="hard">
 
 		<objective type="Time" value="900" optional="true" />
-		<objective type="ZombieKill" id="zombieSnow,zombieSnowFeral" value="3" />
+		<objective type="ZombieKill" id="zombieSnow,zombieSnowFeral,zombieSnowFeralRadiated,zombieSnowRadiated" value="3" />
 
 		<requirement type="Group" id="requirementGroupFireaxe" value="OR">
 			<requirement type="Holding" id="fireaxeIron" />
 			<requirement type="Holding" id="fireaxeSteel" />
+			<requirement type="Holding" id="fireaxeSteelpolished" />
 		</requirement>
 
 		<reward type="SkillPoints" value="2" />
@@ -241,7 +242,7 @@
 	<quest id="challenge_killthewabbit" name_key="challenge_killthewabbit" subtitle_key="challenge_killthewabbit_subtitle" description_key="challenge_killthewabbit_offer" icon="ui_game_symbol_knife"
 	repeatable="true" category_key="challenge" offer_key="challenge_killthewabbit_offer" difficulty="medium">
 
-		<objective type="AnimalKill" id="animalRabbit" value="5"  />
+		<objective type="AnimalKill" id="animalRabbit,animalkillerRabbit" value="5"  />
 
 		<requirement type="Group" id="requirementGroupShotgun" value="OR">
 			<requirement type="Holding" id="gunSawedOffPumpShotgun" />
@@ -262,7 +263,7 @@
 
 	<quest id="challenge_thatlldopig" name_key="challenge_thatlldopig" subtitle_key="challenge_thatlldopig_subtitle" description_key="challenge_thatlldopig_offer" icon="ui_game_symbol_knife"
 	repeatable="true" category_key="challenge" offer_key="challenge_thatlldopig_offer" difficulty="easy">
-		<objective type="AnimalKill" id="animalBoar" value="5"  />
+		<objective type="AnimalKill" id="animalBoar,animalBoarrad" value="5"  />
 
 		<reward type="SkillPoints" value="2" />
 	</quest>
@@ -276,7 +277,7 @@
 
 	<quest id="challenge_dontfeedthebears" name_key="challenge_dontfeedthebears" subtitle_key="challenge_dontfeedthebears_subtitle" description_key="challenge_dontfeedthebears_offer" icon="ui_game_symbol_knife"
 	repeatable="true" category_key="challenge" offer_key="challenge_dontfeedthebears_offer" difficulty="hard">
-		<objective type="AnimalKill" id="animalBear" value="3"  />
+		<objective type="AnimalKill" id="animalBear,animalBearrad,animalZombieBear,animalZombieBearrad" value="3"  />
 
 
 		<reward type="SkillPoints" value="2" />
@@ -284,16 +285,17 @@
 
 	<quest id="challenge_buythefarm" name_key="challenge_buythefarm" subtitle_key="challenge_buythefarm_subtitle" description_key="challenge_buythefarm_offer" icon="ui_game_symbol_knife"
 	repeatable="true" category_key="challenge" offer_key="challenge_buythefarm_offer" difficulty="medium">
-		<objective type="AnimalKill" id="animalRabbit" value="1"  />
+		<objective type="AnimalKill" id="animalRabbit,animalkillerRabbit" value="1"  />
 		<objective type="AnimalKill" id="animalChicken" value="1"  />
-		<objective type="AnimalKill" id="animalBoar" value="1"  />
+		<objective type="AnimalKill" id="animalBoar,animalBoarrad" value="1"  />
 		<objective type="AnimalKill" id="animalStag" value="1"  />
-		<objective type="AnimalKill" id="animalBear" value="1"  />
+		<objective type="AnimalKill" id="animalBear,animalBearrad,animalZombieBear,animalZombieBearrad" value="1"  />
 
 
 		<reward type="SkillPoints" value="2" />
 	</quest>
 
+	
 	<quest id="treasure_taylor" name_key="treasure_taylor" subtitle_key="treasure_taylor_subtitle" description_key="treasure_taylor_offer" icon="ui_game_symbol_treasure"
 	repeatable="true" category_key="treasure" offer_key="treasure_taylor_offer" difficulty="medium">
 
@@ -337,5 +339,8 @@
 	</quest>
 
 
-
+	<quest id="BookWriting" name_key="BookWriting" subtitle_key="BookWriting_subtitle" description_key="BookWriting_offer" icon="ui_game_symbol_book"
+	repeatable="true" category_key="quest" offer_key="BookWriting_offer" difficulty="easy">
+			<reward type="SkillPoints" value="1" />
+	</quest>
 </quests>

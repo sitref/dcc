@@ -465,6 +465,17 @@
 			<multiply skill_level="70,100" value="1.23,1.28"/>
 		</effect>
 	</action_skill>
+	<perk name="Sniper" icon="rifle" description_key="sniperDesc" title_key="Sniper" max_level="3" skill_point_cost_multiplier="2" skill_point_cost_per_level="4" group="firearms">
+		<requirement perk_level="1" required_skill_name="Rifles" required_skill_level="20"/>
+		<requirement perk_level="2" required_skill_name="Rifles" required_skill_level="40"/>
+		<requirement perk_level="3" required_skill_name="Rifles" required_skill_level="80"/>
+		<effect name="DismembermentChance">
+			<add skill_level="0" value="0"/>
+			<add skill_level="1" value="0.05"/>
+			<add skill_level="2" value="0.10"/>
+			<add skill_level="3" value="0.20"/>
+		</effect>
+	</perk>
 	<perk name="Better Lead Than Dead" icon="rifle" description_key="betterLeadThanDeadDesc" title_key="betterLeadThanDead" max_level="5" skill_point_cost_multiplier="1.43" skill_point_cost_per_level="5" group="firearms">
 		<requirement perk_level="1" required_skill_name="Rifles" required_skill_level="1"/>
 		<requirement perk_level="2" required_skill_name="Rifles" required_skill_level="10"/>
@@ -491,6 +502,17 @@
 			<multiply skill_level="70,100" value="1.23,1.28"/>
 		</effect>
 	</action_skill>
+		<perk name="Legolas" icon="archery" description_key="Increases chance to dismember or decapitate a zombie with each rank, using a Bow." title_key="legolas" max_level="3" skill_point_cost_multiplier="0" skill_point_cost_per_level="10" group="weapons">
+			<requirement perk_level="1" required_skill_name="Archery" required_skill_level="30"/>
+			<requirement perk_level="2" required_skill_name="Archery" required_skill_level="60"/>
+			<requirement perk_level="3" required_skill_name="Archery" required_skill_level="90"/>
+			<effect name="DismembermentChance">
+				<add perk_level="0" value="1"/>
+				<add skill_level="1" value="0.1"/>
+				<add skill_level="2" value="0.2"/>
+				<add skill_level="3" value="0.3"/>
+			</effect>
+		</perk>
 
 	<player_skill name="Medicine" icon="medical" description_key="medicineDesc" title_key="medicine" group="health">
 		<effect name="HealthGain">
@@ -506,7 +528,8 @@
 			<multiply skill_level="90,100" value="1.95,2.00"/>
 		</effect>
 	</player_skill>
-
+	
+	
 	<!-- Crafting Skills -->
 	<perk name="craftSkillWeapons" max_level="10" skill_point_cost_multiplier="1.26" skill_point_cost_per_level="3" exp_to_level="5000000"
 	icon="weapon_smithing" description_key="craftSkillWeaponsDesc" title_key="craftSkillWeapons" group="weapons" exp_gain_multiplier="0">
@@ -808,6 +831,16 @@
 		<recipe name="speaker" unlock_level="2"/>
 	</perk>
 
+		<perk name="BookWritingPerk" icon="science" description_key="BookWritingDesc" title_key="BookWritingName" max_level="2" skill_point_cost_multiplier="0" skill_point_cost_per_level="3" group="science">
+		<requirement skill_level="1" required_skill_name="craftSkillScience" required_skill_level="4"/>
+		<recipe name="self-writtenBook" unlock_level="1"/>
+		<recipe name="emptyBook" unlock_level="1"/>
+
+		<requirement skill_level="2" required_skill_name="craftSkillScience" required_skill_level="6"/>
+		<recipe name="newsprint" unlock_level="2"/>
+
+	</perk>
+	
 	<perk name="electricTriggersPerk" icon="electric_switch" description_key="electricTriggersDesc" title_key="electricTriggersName" max_level="3" skill_point_cost_multiplier="1.5" skill_point_cost_per_level="3" group="science">
 		<requirement skill_level="1" required_skill_name="craftSkillScience" required_skill_level="2"/>
 		<recipe name="switch" unlock_level="1"/>

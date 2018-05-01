@@ -821,6 +821,21 @@
 	<item name="scrapChestArmorSchematic" prob="0.7"/>
 	<item name="scrapHelmetSchematic" prob="0.7"/>
 	<item name="scrapGlovesSchematic" prob="0.7"/>
+	<item name="Das_Kapital" prob="0.7"/>
+	<item name="An_Inquiry_into_the__Nature_and_Causes_of_the_Wealth_of_Nations" prob="0.7"/>
+	<item name="Vingt_mille_lieues_sous_les_mers" prob="0.7"/>
+	<item name="Malleus_maleficarum" prob="0.7"/>
+	<item name="The_Old_Man_and_the_Sea" prob="0.7"/>
+	<item name="Divina_Commedia" prob="0.7"/>
+	<item name="A_Brief_History_of_Time" prob="0.7"/>
+	<item name="The_Invisible_Man" prob="0.7"/>
+	<item name="Zum_ewigen_Frieden.Ein_philosophischer_Entwurf" prob="0.7"/>
+	<item name="Vojna_i_mir" prob="0.7"/>
+	<item name="Im_Westen_nichts_Neues" prob="0.7"/>
+	<item name="Tusculanae_disputationes" prob="0.7"/>
+	<item name="Oppertunismus_und_Repression" prob="0.7"/>
+	<item name="Flexibility_and_Security" prob="0.7"/>
+	<item name="Das_Kapital" prob="0.7"/>
 	<!-- <item name="ammunitionNationBook"/>NO LONGER USED
 	<item name="sawedoffPumpShotgunSchematic"/>
 	<item name="wrenchSchematic"/>
@@ -837,15 +852,20 @@
 	<item name="chainsawSchematic"/>
 	<item name="clubSpikedSchematic"/>
 	<item name="explodingCrossbowBoltSchematic"/>
+	<item name="shockingCrossbowBoltSchematic"/>
 	<item name="firstAidKitSchematic"/>
 	<item name="flamingArrowSchematic"/>
 	<item name="gasCanSchematic"/>
+	<item name="beerBook"/>
+	<item name="SchmidtbierBook"/>
 	<item name="ironBootsSchematic"/>
 	<item name="ironChestArmorSchematic"/>
 	<item name="ironGlovesSchematic"/>
 	<item name="ironHelmetSchematic"/>
 	<item name="ironLegArmorSchematic"/>
 	<item name="minibikesForDumbshits" prob="0.5"/>
+	<item name="minibikesForDumbshitsSteeledition" prob="0.3"/>
+	<item name="FancyminibikesForDumbshits" prob="0.1"/>
 	<item name="rocketLauncherSchematic"/>
 	<item name="shotgunSlugSchematic"/>
 	<item name="sledgehammerSchematic"/>
@@ -854,6 +874,9 @@
 	<item name="theEnforcerMagazine"/>
 	<item name="nailgunSchematic"/>
 	<item name="compoundBowSchematic"/>
+	<item name="simpleWeaponImprovements"/>
+	<item name="ActofPolishing"/>
+	<item name="astralhammerschematics"  />
 	<item group="questChallenge" count="1"/>
 	<!--
 	<item name="handleBarsSchematic"/>
@@ -1413,6 +1436,7 @@
 	<item name="bloodDrawKit" prob="0.15"/>
 	<item name="firstAidKitSchematic" prob="0.15"/>
 	<item name="beaker" prob="0.5"/>
+	<item name="sulfuricAcid" prob="0.5"/>
 </lootgroup>
 
 

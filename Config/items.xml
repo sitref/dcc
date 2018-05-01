@@ -131,7 +131,7 @@ Mesh files no longer used:
 <item id="9" name="clubSpiked">
 	<property name="Extends" value="clubIron"/>
 	<property name="Meshfile" value="Items/Weapons/Melee/Club/Club_Wood_SpikedPrefab"/>
-	<property name="RepairTools" value="forgedIron"/>
+	<property name="RepairTools" value="nail"/>
 	<property name="EconomicValue" value="300"/>
 	<property name="SellableToTrader" value="true"/>
 	<property class="Action0"> <!-- AttackAction -->
@@ -186,6 +186,90 @@ Mesh files no longer used:
 	<property name="ActionSkillGroup" value="Blunt Weapons"/>
 	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
 </item>
+
+<item id="13" name="sledgehammerSteel">
+	<property name="Meshfile" value="Items/Tools/sledgehammer_steelPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="CustomIcon" value="sledgehammer" />
+	<property name="CustomIconTint" value="9AC0CD" />
+	<property name="RepairTools" value="forgedSteel"/>
+	<property name="HoldType" value="33"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy1"/>
+	<property name="FuelValue" value="30"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="CritChance" value="0.4"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Melee"/>
+		<property name="Delay" value="1.8"/>
+		<property name="Range" value="2.4"/>
+		<property name="Sphere" value="0.2"/>
+		<property name="Block_range" value="4"/>
+		<property name="Sound_start" value="SlowSwoosh"/>
+		<property name="Stamina_usage" value="15"/>
+		<property name="Buff" value="criticalBlunt,stunned,sprainedLeg"/>
+		<property name="Buff_chance" value="0.5,0.3,0.3"/>
+		<property name="DamageBonus.wood" value="0.5"/>
+		<property name="DamageBonus.head" value="4"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="10"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="30,60"/>
+		<property name="BlockDamage" value="102,306"/> <!-- 80% of a steel pick -->
+		<property name="DegradationMax" value="500,1500"/>
+		<property name="DegradationRate" value="1,1"/>
+		<property name="DismembermentBaseChance" value="0,0.05"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons,Tools/Traps"/>
+	<property name="ActionSkillGroup" value="Blunt Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+	<property name="DescriptionKey" value="sledgehammerDesc"/>
+</item>
+
+<item id="14" name="astralhammer">
+	<property name="Meshfile" value="Items/Tools/sledgehammer_steelPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="CustomIcon" value="sledgehammer" />
+	<property name="CustomIconTint" value="DBDBDB" />
+	<property name="RepairTools" value="rawDiamond"/>
+	<property name="HoldType" value="33"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="metaldestroy1"/>
+	<property name="FuelValue" value="30"/>
+	<property name="EconomicValue" value="800"/>
+	<property name="CritChance" value="0.5"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Melee"/>
+		<property name="Delay" value="1.5"/>
+		<property name="Range" value="2.9"/>
+		<property name="Sphere" value="0.5"/>
+		<property name="Block_range" value="4"/>
+		<property name="Sound_start" value="SlowSwoosh"/>
+		<property name="Stamina_usage" value="18"/>
+		<property name="Buff" value="criticalBlunt,stunned,sprainedLeg,shockedBuff,burning"/>
+		<property name="Buff_chance" value="0.5,0.5,0.5,0.9,0.9"/>
+		<property name="DamageBonus.wood" value="2"/>
+		<property name="DamageBonus.head" value="6"/>
+		<property name="DamageBonus.glass" value="3"/>
+		<property name="ToolCategory.Butcher" value="0" param1="10"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="80,150"/>
+		<property name="BlockDamage" value="142,406"/> <!-- 80% of a steel pick -->
+		<property name="DegradationMax" value="300,1000"/>
+		<property name="DegradationRate" value="1,1"/>
+		<property name="DismembermentBaseChance" value="0,0.05"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons,Tools/Traps"/>
+	<property name="ActionSkillGroup" value="Blunt Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+	<property name="DescriptionKey" value="astralhammerDesc"/>
+</item>
+
+
 
 <item id="15" name="torch">
 	<property name="Class" value="ItemClassTorch"/>
@@ -422,7 +506,7 @@ Mesh files no longer used:
 	<property name="Crosshair_max_distance" value="6"/>
 	<!-- 6 -->
 	<property name="Magazine_size" value="15"/>
-	<property name="Magazine_items" value="9mmBullet"/>
+	<property name="Magazine_items" value="9mmBullet, Unload"/>
 	<property name="Magazine_item_ray_counts" value="1"/>
 	<property name="Magazine_item_ray_spreads" value="0.85"/>
 	<!-- .85 -->
@@ -473,7 +557,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="5"/> <!-- 5 -->
 		<property name="Crosshair_max_distance" value="6"/> <!-- 6 -->
 		<property name="Magazine_size" value="15"/>
-		<property name="Magazine_items" value="9mmBullet"/>
+		<property name="Magazine_items" value="9mmBullet, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0.85"/> <!-- .85 -->
 		<property name="Reload_time" value="2"/>
@@ -535,7 +619,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="7"/> <!-- 7 -->
 		<property name="Crosshair_max_distance" value="9"/> <!-- 9 -->
 		<property name="Magazine_size" value="6"/>
-		<property name="Magazine_items" value="44MagBullet"/>
+		<property name="Magazine_items" value="44MagBullet, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0.87"/> <!-- .87 -->
 		<property name="Reload_time" value="4"/>
@@ -591,7 +675,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="41"/> <!-- 41 -->
 		<property name="Crosshair_max_distance" value="49"/> <!-- 49 -->
 		<property name="Magazine_size" value="8"/>
-		<property name="Magazine_items" value="shotgunShell"/>
+		<property name="Magazine_items" value="shotgunShell, Unload"/>
 		<property name="Magazine_item_ray_counts" value="9"/>
 		<property name="Magazine_item_ray_spreads" value="0.74"/> <!-- .74 -->
 		<property name="Reload_time" value="2.6"/>
@@ -649,7 +733,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="23"/> <!-- 23 -->
 		<property name="Crosshair_max_distance" value="28"/> <!-- 28 -->
 		<property name="Magazine_size" value="8"/>
-		<property name="Magazine_items" value="shotgunShell, shotgunSlug"/>
+		<property name="Magazine_items" value="shotgunShell, shotgunSlug, Unload"/>
 		<property name="Magazine_item_ray_counts" value="8, 1"/>
 		<property name="Magazine_item_ray_spreads" value="0.835,0.605"/> <!-- .835 / .605 -->
 		<property name="Reload_time" value="2.6"/>
@@ -710,7 +794,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="7"/> <!-- 7 -->
 		<property name="Crosshair_max_distance" value="9"/> <!-- 9 -->
 		<property name="Magazine_size" value="30"/>
-		<property name="Magazine_items" value="9mmBullet"/>
+		<property name="Magazine_items" value="9mmBullet, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0"/>
 		<property name="Reload_time" value="4.1"/>
@@ -771,7 +855,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="13"/> <!-- 13 -->
 		<property name="Crosshair_max_distance" value="16"/> <!-- 16 -->
 		<property name="Magazine_size" value="30"/>
-		<property name="Magazine_items" value="762mmBullet"/>
+		<property name="Magazine_items" value="762mmBullet, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0"/>
 		<property name="Reload_time" value="3.9"/>
@@ -833,7 +917,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="30"/> <!-- 30 -->
 		<property name="Crosshair_max_distance" value="36"/> <!-- 36 -->
 		<property name="Magazine_size" value="1"/>
-		<property name="Magazine_items" value="762mmBullet"/>
+		<property name="Magazine_items" value="762mmBullet, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0"/>
 		<property name="Reload_time" value="2.66"/>
@@ -889,7 +973,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="45"/> <!-- 45 -->
 		<property name="Crosshair_max_distance" value="54"/> <!-- 54 -->
 		<property name="Magazine_size" value="5"/>
-		<property name="Magazine_items" value="762mmBullet"/>
+		<property name="Magazine_items" value="762mmBullet, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0"/>
 		<property name="Reload_time" value="2.5"/>
@@ -911,6 +995,132 @@ Mesh files no longer used:
 		<property name="Zoom_overlay" value="Items/Weapons/HUD/sniper_zoom_overlay"/>
 		<property name="Zoom_max_out" value="40"/>
 		<property name="Zoom_max_in" value="15"/>
+	</property>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="flashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="ActionSkillGroup" value="Rifles"/>
+	<property name="CraftingSkillGroup" value="craftSkillGuns"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="LightValue" value="0.45"/>
+</item>
+
+
+<item id="52" name="gunHuntingRifleScope">
+	<property name="Meshfile" value="Items/Weapons/Ranged/HuntingRifle/HuntingRiflePrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="CustomIcon" value="gunHuntingRifle" />
+	<property name="CustomIconTint" value="838B83" />
+	<property name="RepairTools" value="repairKit"/>
+	<property name="HoldType" value="30"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="FuelValue" value="32"/>
+	<property name="Attachments" value="flashlight02"/>
+	<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property class="Parts">
+		<property name="Stock" value="partsHuntingRifle_stock"/>
+		<property name="Receiver" value="partsHuntingRifle_receiver"/>
+		<property name="Pump" value="partsHuntingRifle_parts"/>
+		<property name="Barrel" value="partsHuntingRifle_barrel"/>
+	</property>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value="0.5"/>
+		<property name="Crosshair_min_distance" value="30"/> <!-- 30 -->
+		<property name="Crosshair_max_distance" value="36"/> <!-- 36 -->
+		<property name="Magazine_size" value="1"/>
+		<property name="Magazine_items" value="762mmBullet, Unload"/>
+		<property name="Magazine_item_ray_counts" value="1"/>
+		<property name="Magazine_item_ray_spreads" value="0"/>
+		<property name="Reload_time" value="2.66"/>
+		<property name="Bullet_icon" value="uzi"/>
+		<property name="Sound_start" value="hunting_rifle_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="weapon_empty"/>
+		<property name="Sound_reload" value="hunting_rifle_reload"/>
+		<property name="Particles_muzzle_fire" value="nozzleflashuzi"/>
+		<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/>
+		<property name="DamageBonus.head" value="6"/>
+		<property name="DamageBonus.wood" value="5"/>
+		<property name="DamageBonus.earth" value="0.2"/>
+		<property name="DamageBonus.glass" value="1"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_overlay" value="Items/Weapons/HUD/sniper_zoom_overlay"/>
+		<property name="Zoom_max_out" value="40"/>
+		<property name="Zoom_max_in" value="15"/>
+	</property>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="flashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="ActionSkillGroup" value="Rifles"/>
+	<property name="CraftingSkillGroup" value="craftSkillGuns"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="LightValue" value="0.45"/>
+	<property name="DescriptionKey" value="gunHuntingRifleDesc"/>
+</item>
+
+<item id="53" name="gunfireMP5">
+	<property name="Meshfile" value="Items/Weapons/Ranged/MP5/MP5Prefab"/>
+	<property name="Material" value="metal"/>
+	<property name="CustomIcon" value="gunMP5" />
+	<property name="CustomIconTint" value="FF7256" />
+	<property name="RepairTools" value="repairKit"/>
+	<property name="HoldType" value="6"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Attachments" value="flashlight02"/>
+	<property name="TintColor" value="255,255,255"/>
+	<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property class="Parts">
+		<property name="Stock" value="partsMP5_stock"/>
+		<property name="Receiver" value="partsMP5_receiver"/>
+		<property name="Pump" value="partsMP5_parts"/>
+		<property name="Barrel" value="partsfireMP5_barrel"/>
+	</property>
+	<property name="Sound_Sight_In" value="smg_sight_in"/>
+	<property name="Sound_Sight_Out" value="smg_sight_out"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value="0.150"/>
+		<property name="Auto_fire" value="true"/>
+		<property name="Crosshair_min_distance" value="7"/> <!-- 7 -->
+		<property name="Crosshair_max_distance" value="9"/> <!-- 9 -->
+		<property name="Magazine_size" value="20"/>
+		<property name="Magazine_items" value="9mmBullet, Unload"/>
+		<property name="Magazine_item_ray_counts" value="1"/>
+		<property name="Magazine_item_ray_spreads" value="0"/>
+		<property name="Reload_time" value="4.1"/>
+		<property name="Bullet_icon" value="uzi"/>
+		<property name="Sound_start" value="mp5_fire_start"/>
+		<property name="Sound_repeat" value="Weapons/Ranged/MP5/mp5_fire_lp"/>
+		<property name="Sound_end" value="Weapons/Ranged/MP5/mp5_fire_end"/>
+		<property name="Sound_empty" value="weapon_empty"/>
+		<property name="Sound_reload" value="mp5_reload"/>
+		<property name="Horde_meter_rate" value="2.5"/>
+		<property name="Horde_meter_distance" value="20"/>
+		<property name="Particles_muzzle_fire" value="nozzleflashuzi"/>
+		<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/>
+		<property name="DamageBonus.head" value="4"/>
+		<property name="DamageBonus.wood" value="5"/>
+		<property name="DamageBonus.earth" value="0.2"/>
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="Buff" value="burning,critGunMP5"/>
+		<property name="Buff_chance" value="0.5,0.2"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="35"/>
+		<property name="Zoom_max_in" value="35"/>
 	</property>
 	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
 	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
@@ -946,7 +1156,7 @@ Mesh files no longer used:
 		<property name="Crosshair_max_distance" value="34"/>
 		<!-- <property name="Range" value="200"/> -->
 		<property name="Magazine_size" value="1"/>
-		<property name="Magazine_items" value="rocket"/>
+		<property name="Magazine_items" value="rocket, Unload"/>
 		<property name="Rays_spread" value="0.095"/>
 		<property name="Reload_time" value="2"/>
 		<property name="Bullet_icon" value="uzi"/>
@@ -987,7 +1197,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="41"/> <!-- 41 -->
 		<property name="Crosshair_max_distance" value="49"/> <!-- 49 -->
 		<property name="Magazine_size" value="1"/>
-		<property name="Magazine_items" value="blunderbussAmmo"/>
+		<property name="Magazine_items" value="blunderbussAmmo, Unload"/>
 		<property name="Magazine_item_ray_counts" value="10"/>
 		<property name="Magazine_item_ray_spreads" value="0.74"/> <!-- .74 -->
 		<property name="Reload_time" value="3.9"/>
@@ -1132,8 +1342,8 @@ Mesh files no longer used:
 	</property>
 	<property class="Action1"> <!-- UseAction -->
 		<property name="Class" value="Vomit"/>
-		<property name="Delay" value="0.2"/>
-		<property name="Range" value="400"/>
+		<property name="Delay" value="0.15"/>
+		<property name="Range" value="500"/>
 		<property name="Auto_fire" value="true"/>
 		<property name="Infinite_ammo" value="true"/>
 		<property name="Magazine_items" value="projectileZombieVomit"/>
@@ -1147,8 +1357,8 @@ Mesh files no longer used:
 		<property name="Sound_end" value=""/>
 		<property name="Sound_empty" value=""/>
 		<property name="Sound_reload" value=""/>
-		<property name="Buff" value="infection"/>
-		<property name="Buff_chance" value="0.1"/>
+		<property name="Buff" value="infection,DrinkGrainAlcohol"/>
+		<property name="Buff_chance" value="0.1,0.8"/>
 	</property>
 </item>
 
@@ -1158,12 +1368,12 @@ Mesh files no longer used:
 	<property name="CreativeMode" value="None"/>
 	<property class="Action1">
 		<property name="Class" value="Projectile"/>
-		<property name="DamageEntity" value="4"/>
+		<property name="DamageEntity" value="6"/>
 		<property name="DamageBlock" value="400"/>
 		<property name="Explosion.ParticleIndex" value="7"/>
-		<property name="Velocity" value="20"/>
+		<property name="Velocity" value="25"/>
 		<property name="FlyTime" value="0.90"/>
-		<property name="LifeTime" value="4"/>
+		<property name="LifeTime" value="6"/>
 		<property name="CollisionRadius" value="0.8"/>
 		<property name="DamageBonus.earth" value="0.01"/>
 		<!--
@@ -1230,7 +1440,7 @@ Mesh files no longer used:
 	<property name="HoldType" value="9"/>
 	<property class="Action0">
 		<property name="Buff" value="bleeding,infection1,stunned"/>
-		<property name="Buff_chance" value="0.04,0.25,0.5"/>
+		<property name="Buff_chance" value="0.04,0.3,0.5"/>
 	</property>
 </item>
 
@@ -1240,6 +1450,8 @@ Mesh files no longer used:
 	<property name="HoldType" value="9"/>
 	<property class="Action0">
 		<property name="DamageBlock" value="300"/>
+		<property name="Buff" value="shockedBuff"/>
+		<property name="Buff_chance" value="0.4"/>
 	</property>
 </item>
 
@@ -1565,6 +1777,25 @@ Mesh files no longer used:
 	</property>
 </item>
 
+<item id="109" name="fireaxeSteelpolished">
+	<property name="Extends" value="fireaxeIron"/>
+	<property name="CustomIcon" value="fireaxeIron"/> <!-- xxx model to be replaced -->
+	<property name="CustomIconTint" value="a0a0ff"/>
+	<property name="Meshfile" value="Items/Weapons/Melee/Axe/fireaxePrefab"/>
+	<property name="RepairTools" value="steelPolish"/>
+	<property name="EconomicValue" value="912"/>
+	<property class="Action0">
+		<property name="Stamina_usage" value="15"/>
+		<property name="ToolCategory.Butcher" value="0.75" param1="10"/>
+		<property name="ToolCategory.harvestingTools" value="1.4" param1="1"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="9,22"/>
+		<property name="BlockDamage" value="30,72"/>
+		<property name="DegradationMax" value="500,1400"/>
+	</property>
+</item>
+
 <item id="113" name="pickaxeIron">
 	<property name="Meshfile" value="Items/Tools/pickaxe_ironPrefab"/>
 	<property name="Material" value="metal"/>
@@ -1622,6 +1853,27 @@ Mesh files no longer used:
 	<property class="Attributes">
 		<property name="EntityDamage" value="6,20"/>
 		<property name="BlockDamage" value="55,137"/> <!-- up to x4 from skills -->
+		<property name="DegradationMax" value="500,1400"/>
+	</property>
+</item>
+
+<item id="115" name="pickaxeSteelpolished">
+	<property name="Extends" value="pickaxeIron"/>
+	<property name="Meshfile" value="Items/Tools/pickaxe_steelPrefab"/>
+	<property name="HoldType" value="4"/>
+	<property name="RepairTools" value="steelPolish"/>
+	<property name="CustomIcon" value="pickaxeSteel"/>
+	<property name="EconomicValue" value="1012"/>
+	<property class="Action0">
+		<property name="Delay" value="1.5"/>
+		<property name="Stamina_usage" value="20.4"/>
+		<property name="DamageBonus.head" value="5"/>
+		<property name="ToolCategory.harvestingTools" value="1.4" param1="1"/>
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property class="Attributes">
+		<property name="EntityDamage" value="8,24"/>
+		<property name="BlockDamage" value="70,237"/> <!-- up to x4 from skills -->
 		<property name="DegradationMax" value="500,1400"/>
 	</property>
 </item>
@@ -1732,8 +1984,28 @@ Mesh files no longer used:
 		<property name="EntityDamage" value="8,19"/>
 		<property name="DegradationMax" value="500,1400"/>
 	</property>
+	
+</item><item id="120" name="shovelSteelpolished">
+	<property name="Extends" value="shovelIron"/>
+	<property name="Meshfile" value="Items/Tools/shovel_steelPrefab"/>
+	<property name="CustomIcon" value="shovelIron"/>
+	<property name="CustomIconTint" value="a0a0ff"/>
+	<property name="RepairTools" value="steelPolish"/>
+	<property name="EconomicValue" value="1012"/>
+	<property name="DegradationBreaksAfter" value="false" />
+	<property class="Action0">
+		<property name="Delay" value="1.2"/>
+		<property name="Stamina_usage" value="14.36"/>
+		<property name="DamageBonus.earth" value="4"/>
+		<property name="DamageBonus.organic" value="1"/>
+		<property name="ToolCategory.harvestingTools" value="1.4" param1="1"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="10,22"/>
+		<property name="DegradationMax" value="600,1600"/>
+	</property>
+	
 </item>
-
 <item id="122" name="hoeIron">
 	<property name="Meshfile" value="Items/Tools/hoe_ironPrefab"/>
 	<property name="Material" value="metal"/>
@@ -1788,6 +2060,62 @@ Mesh files no longer used:
 		<!-- clubWood 10.5 (42) DPS, clubIron 12 (48) DPS, clubBarbed 16 (82) DPS, clubSpiked 22 (135) DPS -->
 		<property name="BlockDamage" value="10,20"/>
 		<property name="DegradationMax" value="200,1000"/>
+		<property name="DegradationRate" value="1,1"/>
+		<property name="DismembermentBaseChance" value="-0.3,-0.15"/>
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="PickupJournalEntry" value="farmingTip"/>
+	<property name="ActionSkillGroup" value="Mining Tools"/>
+	<property name="CraftingSkillGroup" value="craftSkillTools"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
+
+<item id="123" name="fischisGoldenGardenHoe">
+	<property name="Meshfile" value="Items/Tools/hoe_ironPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="RepairTools" value="goldNugget"/>
+	<property name="HoldType" value="50"/>
+	<property name="CustomIcon" value="hoeIron" />
+	<property name="CustomIconTint" value="CD950C" />
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="FuelValue" value="24"/>
+	<property name="EconomicValue" value="800"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Melee"/>
+		<property name="Delay" value="0.5"/>
+		<property name="Range" value="3"/>
+		<property name="Sphere" value="0.3"/>
+		<property name="Block_range" value="4"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="Stamina_usage" value="2.5"/>
+		<property name="DamageBonus.head" value="8"/>
+		<property name="DamageBonus.earth" value="4"/>
+		<property name="DamageBonus.glass" value="0.2"/>
+		<property name="DamageBonus.stone" value="0"/>
+		<property name="DamageBonus.metal" value="0"/>
+		<property name="ActionExp" value="10"/>
+		<property name="ActionExpBonusMultiplier" value="4"/>
+		<property name="ToolCategory.Hoe" value="1"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="ToolCategory.Butcher" value="0" param1="5"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value="0.6"/>
+		<property name="Repair_amount" value="30"/>
+		<property name="Upgrade_hit_offset" value="-4"/>
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Upgrade_action_sound" value="ImpactSurface/metalhitearth"/>
+		<property name="Allowed_upgrade_items" value="hoeIron,dirtFragment,fertilizer"/>
+		<property name="ActionExp" value="5"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="20,60"/>
+		<!-- clubWood 10.5 (42) DPS, clubIron 12 (48) DPS, clubBarbed 16 (82) DPS, clubSpiked 22 (135) DPS -->
+		<property name="BlockDamage" value="10,40"/>
+		<property name="DegradationMax" value="400,4000"/>
 		<property name="DegradationRate" value="1,1"/>
 		<property name="DismembermentBaseChance" value="-0.3,-0.15"/>
 	</property>
@@ -1918,7 +2246,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="15"/> <!-- 15 -->
 		<property name="Crosshair_max_distance" value="18"/> <!-- 18 -->
 		<property name="Magazine_size" value="15"/>
-		<property name="Magazine_items" value="nail"/>
+		<property name="Magazine_items" value="nail, Unload"/>
 		<property name="Rays_spread" value="0.043"/>
 		<property name="Instantiate_on_load" value="false"/>
 		<property name="Reload_time" value="2"/>
@@ -1971,7 +2299,7 @@ Mesh files no longer used:
 		<property name="Crosshair_max_distance" value="30"/>
 		<property name="Magazine_size" value="200"/>
 		<property name="Single_magazine_usage" value="false"/>
-		<property name="Magazine_items" value="gasCan"/>
+		<property name="Magazine_items" value="gasCan, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0"/>
 		<property name="Bullet_material" value="metal"/>
@@ -2022,7 +2350,7 @@ Mesh files no longer used:
 		<property name="Crosshair_max_distance" value="30"/>
 		<property name="Magazine_size" value="200"/>
 		<property name="Single_magazine_usage" value="false"/>
-		<property name="Magazine_items" value="gasCan"/>
+		<property name="Magazine_items" value="gasCan, Unload"/>
 		<property name="Magazine_item_ray_counts" value="1"/>
 		<property name="Magazine_item_ray_spreads" value="0"/>
 		<property name="Bullet_material" value="metal"/>
@@ -2093,7 +2421,7 @@ Mesh files no longer used:
 		<property name="Hitmask_override" value="Melee"/>
 		<property name="Sound_start" value="erase"/>
 		<property name="Infinite_ammo" value="true"/>
-		<property name="Magazine_items" value="paint"/>
+		<property name="Magazine_items" value="paint, Unload"/>
 		<property name="Range" value="15"/>
 		<property name="Delay" value="0.83"/>
 		<property name="RemoveTexture" value="true"/>
@@ -2103,7 +2431,7 @@ Mesh files no longer used:
 		<property name="Class" value="TextureBlock"/>
 		<property name="Hitmask_override" value="Melee"/>
 		<property name="Sound_start" value="paint"/>
-		<property name="Magazine_items" value="paint"/>
+		<property name="Magazine_items" value="paint, Unload"/>
 		<property name="Magazine_size" value="1"/>
 		<property name="Range" value="15"/>
 		<property name="Delay" value="0.83"/>
@@ -2144,7 +2472,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="30"/> <!-- 30 -->
 		<property name="Crosshair_max_distance" value="30"/> <!-- 30 -->
 		<property name="Magazine_size" value="1"/>
-		<property name="Magazine_items" value="arrow,ironArrow,steelArrow"/>
+		<property name="Magazine_items" value="arrow,ironArrow,steelArrow, Unload"/>
 		<property name="Rays_spread" value="0.017"/>
 		<property name="Reload_time" value="0.9"/>
 		<property name="Bullet_icon" value="uzi"/>
@@ -2199,7 +2527,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="30"/> <!-- 30 -->
 		<property name="Crosshair_max_distance" value="30"/> <!-- 30 -->
 		<property name="Magazine_size" value="1"/>
-		<property name="Magazine_items" value="ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt"/>
+		<property name="Magazine_items" value="ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt , shockingCrossbowBolt, Unload"/>
 		<property name="Rays_spread" value="0.012"/>
 		<property name="Reload_time" value="2"/>
 		<property name="Bullet_icon" value="uzi"/>
@@ -2249,7 +2577,7 @@ Mesh files no longer used:
 		<property name="Crosshair_min_distance" value="30"/> <!-- 30 -->
 		<property name="Crosshair_max_distance" value="30"/> <!-- 30 -->
 		<property name="Magazine_size" value="1"/>
-		<property name="Magazine_items" value="arrow,ironArrow,steelArrow,flamingArrow"/>
+		<property name="Magazine_items" value="arrow,ironArrow,steelArrow,flamingArrow, Unload"/>
 		<property name="Rays_spread" value="0.011"/>
 		<property name="Reload_time" value="0.9"/>
 		<property name="Bullet_icon" value="uzi"/>
@@ -2279,6 +2607,107 @@ Mesh files no longer used:
 	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
 </item>
 
+<item id="148" name="crossbowscope">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Bows/Crossbow/crossbowPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="CustomIcon" value="crossbow" />
+	<property name="CustomIconTint" value="838B83" />
+	<property name="RepairTools" value="forgedIron"/>
+	<property name="HoldType" value="26"/>
+	<property name="FuelValue" value="70"/>
+	<property name="EconomicValue" value="220"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="crossbow_sight_in"/>
+	<property name="Sound_Sight_Out" value="crossbow_sight_out"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Launcher"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value="0.8"/>
+		<property name="Crosshair_min_distance" value="30"/> <!-- 30 -->
+		<property name="Crosshair_max_distance" value="30"/> <!-- 30 -->
+		<property name="Magazine_size" value="1"/>
+		<property name="Magazine_items" value="ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt, shockingCrossbowBolt, Unload"/>
+		<property name="Rays_spread" value="0.012"/>
+		<property name="Reload_time" value="2"/>
+		<property name="Bullet_icon" value="uzi"/>
+		<property name="Sound_start" value="crossbow_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="weapon_empty"/>
+		<property name="Sound_reload" value="crossbow_reload"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_overlay" value="Items/Weapons/HUD/sniper_zoom_overlay"/>
+		<property name="Zoom_max_out" value="40"/>
+		<property name="Zoom_max_in" value="15"/>
+	</property>
+	<property class="Attributes">
+		<property name="DegradationRate" value="1,1"/>
+		<property name="DegradationMax" value="240,600"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="ActionSkillGroup" value="Archery"/>
+	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="DescriptionKey" value="crossbowDesc" />
+</item>
+
+<item id="149" name="extMagazineCrossbow">
+	<property name="Meshfile" value="Items/Weapons/Ranged/Bows/Crossbow/crossbowPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="RepairTools" value="forgedIron"/>
+	<property name="CustomIcon" value="crossbow" />
+	<property name="CustomIconTint" value="B23AEE" />
+	<property name="HoldType" value="26"/>
+	<property name="FuelValue" value="70"/>
+	<property name="EconomicValue" value="220"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="CrosshairOnAim" value="false"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="crossbow_sight_in"/>
+	<property name="Sound_Sight_Out" value="crossbow_sight_out"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="Launcher"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value="0.8"/>
+		<property name="Crosshair_min_distance" value="30"/> <!-- 30 -->
+		<property name="Crosshair_max_distance" value="30"/> <!-- 30 -->
+		<property name="Magazine_size" value="5"/>
+		<property name="Magazine_items" value="ironCrossbowBolt, steelCrossbowBolt, explodingCrossbowBolt, shockingCrossbowBolt, Unload"/>
+		<property name="Rays_spread" value="0.012"/>
+		<property name="Reload_time" value="2"/>
+		<property name="Bullet_icon" value="uzi"/>
+		<property name="Sound_start" value="crossbow_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="weapon_empty"/>
+		<property name="Sound_reload" value="crossbow_reload"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="40"/>
+		<property name="Zoom_max_in" value="40"/>
+	</property>
+	<property class="Attributes">
+		<property name="DegradationRate" value="1,1"/>
+		<property name="DegradationMax" value="240,600"/>
+	</property>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="ActionSkillGroup" value="Archery"/>
+	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+	<property name="PickupJournalEntry" value="alternateAmmoTip"/>
+	<property name="DescriptionKey" value="crossbowDesc" />
+</item>
+
 <!-- * * * * * * * * * * ammunition / arrows / bolts / fuel * * * * * * * * * * -->
 
 <item id="150" name="9mmBullet">
@@ -2291,17 +2720,6 @@ Mesh files no longer used:
 	<property name="Group" value="Ammo/Weapons"/>
 </item>
 
-<!-- In my world an MP5 uses 9x19 Parabellum.
-<item id="151" name="10mmBullet">
-	<property name="Meshfile" value="Items/Weapons/Ranged/Pistol/10mm_bulletPrefab"/>
-	<property name="Material" value="brass"/>
-	<property name="HoldType" value="21"/>
-	<property name="Stacknumber" value="500"/>
-	<property name="CraftingSkillGroup" value="craftSkillGuns"/>
-	<property name="EconomicValue" value="17"/>
-	<property name="Group" value="Ammo/Weapons"/>
-</item>
--->
 
 <item id="152" name="44MagBullet">
 	<property name="Meshfile" value="Items/Weapons/Ranged/Magnums/44_roundPrefab"/>
@@ -2614,6 +3032,30 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="craftSkillScience"/>
 </item>
 
+<item id="174" name="shockingCrossbowBolt">
+	<property name="Extends" value="ironCrossbowBolt"/>
+	<property name="Meshfile" value="Items/Weapons/Ranged/Bows/Crossbow/crossbowBoltExplosivePrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/crossbow_bolt_dropped_explosivePrefab"/>
+	<property name="HandMeshfile" value="Items/Misc/crossbow_bolt_hand_explosivePrefab"/>
+	<property name="CustomIcon" value="ironCrossbowBolt"/>
+	<property name="CustomIconTint" value="20B2AA"/>
+	<property name="FuelValue" value="12"/>
+	<property name="EconomicValue" value="80"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property class="Action1">
+		<property name="Velocity" value="65"/>
+		<property name="Gravity" value="-6"/>
+		<property name="LifeTime" value="12"/>
+		<property name="DamageBonus.wood" value="2"/>
+	</property>
+	<property class="Attributes">
+		<property name="EntityDamage" value="30,55"/>
+		<property name="BlockDamage" value="6,11"/>
+		<property name="ApplyBuff" value="0.5,0.5" param1="arrowCriticalBleedout"/>
+		<property name="ApplyBuff" value="1,1" param1="shockedBuff"/>
+		<property name="DescriptionKey" value="shockingCrossbowBoltDesc" />
+	</property>
+</item>
 <!-- * * * * * * * * * * explosives / decoys / thrown items * * * * * * * * * * -->
 
 <item id="180" name="pipeBomb">
@@ -2734,24 +3176,26 @@ Mesh files no longer used:
 <item id="184" name="HolypipebombOfAntioch">
 	<property name="Class" value="ItemClassTimeBomb"/>
 	<property name="Meshfile" value="Items/Weapons/Ranged/PipeBomb/PipeBombPrefab"/>
+	<property name="CustomIcon" value="rocket"/>
 	<property name="CustomIconTint" value="EEC900"/>
 	<property name="Material" value="metal"/>
 	<property name="HoldType" value="25"/>
 	<property name="Stacknumber" value="1"/> <!-- STK explosives -->
 	<property name="EconomicValue" value="0"/>
-	<property name="Explosion.BlockDamage" value="5"/>
-	<property name="Explosion.EntityDamage" value="20"/>
+	<property name="Explosion.BlockDamage" value="50"/>
+	<property name="Explosion.EntityDamage" value="20000"/>
 	<property name="Explosion.ParticleIndex" value="1"/>
-	<property name="Explosion.RadiusBlocks" value="2"/>
-	<property name="Explosion.RadiusEntities" value="4"/>
+	<property name="Explosion.RadiusBlocks" value="30"/>
+	<property name="Explosion.RadiusEntities" value="8"/>
 	<property name="Explosion.DamageBonus.stone" value="0"/>
+	<property name="Explosion.DamageBonus.organic" value="1000"/>
 	<property name="Explosion.DamageBonus.metal" value="0"/>
 	<property name="Explosion.DamageBonus.earth" value="0"/> <!-- should work? -->
 	<property name="Explosion.DamageBonus.wood" value="0"/>
 	<property name="Explosion.DamageBonus.water" value="0"/>
 	<property name="Explosion.DamageBonus.glass" value="10000"/>
-	<property name="Explosion.BlastPower" value="350"/> <!-- (int,200) how far ragdolls and such are flung -->
-	<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
+	<property name="Explosion.BlastPower" value="450"/> <!-- (int,200) how far ragdolls and such are flung -->
+	<property name="FuseTime" value="5"/> <!-- End: Needed for  time in sec, max 6 -->
 	<property name="DropScale" value="2"/>
 	<property class="Action0"> <!-- AttackAction -->
 		<property name="Class" value="ThrowAway"/>
@@ -3086,6 +3530,21 @@ Mesh files no longer used:
 	<property name="Extends" value="partsMaster"/>
 	<property name="DescriptionKey" value="partsMP5GroupDesc"/>
 	<property name="PartType" value="Barrel"/>
+	<property name="Weight" value="25"/>
+	<property class="Attributes">
+		<property name="EntityDamage" value="17,29"/>
+		<property name="BlockDamage" value="3,5"/>
+		<property name="DegradationMax" value="5600,14000"/>
+	</property>
+	<property name="EconomicValue" value="1125"/>
+</item>
+
+<item id="234" name="partsfireMP5_barrel">
+	<property name="Extends" value="partsMaster"/>
+	<property name="DescriptionKey" value="partsMP5GroupDesc"/>
+	<property name="PartType" value="Barrel"/>
+	<property name="CustomIcon" value="partsMP5_barrel" />
+	<property name="CustomIconTint" value="CD2990" />
 	<property name="Weight" value="25"/>
 	<property class="Attributes">
 		<property name="EntityDamage" value="17,29"/>
@@ -3552,6 +4011,301 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
 </item>
 
+	<item id="284" name="MinibikeChassisSteel">
+		<property name="CustomIcon" value="minibikeChassis"/>
+		<property name="CustomIconTint" value="20B2AA"/>
+		<property name="VehicleSlotType" value="chassis"/>
+		<property name="HoldingItemHidden" value="true"/>
+		<property name="Meshfile" value="Items/Misc/chassisPrefab"/>
+		<property name="Material" value="metal"/>
+		<property name="RepairTools" value="repairKit"/>
+		<property name="HoldType" value="7"/>
+		<property class="Attributes">
+			<property name="VehicleDamagePassedToPlayer" value="0.7, 0.3"/>
+			<property name="DegradationRate" value="10,10"/>
+			<property name="DegradationMax" value="500,7000"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="SpawnMinibike"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="475"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+	<item id="285" name="FancyMinibikeChassis">
+		<property name="CustomIcon" value="minibikeChassis"/>
+		<property name="CustomIconTint" value="B4EEB4"/>
+		<property name="VehicleSlotType" value="chassis"/>
+		<property name="HoldingItemHidden" value="true"/>
+		<property name="Meshfile" value="Items/Misc/chassisPrefab"/>
+		<property name="Material" value="Msteel"/>
+		<property name="RepairTools" value="repairKit"/>
+		<property name="HoldType" value="7"/>
+		<property class="Attributes">
+			<property name="VehicleDamagePassedToPlayer" value="0.6, 0.1"/>
+			<property name="DegradationRate" value="10,10"/>
+			<property name="DegradationMax" value="700,8000"/>
+		</property>
+		<property class="Action1">
+			<property name="Class" value="SpawnMinibike"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="1000"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+	<item id="286" name="MinibikeSteelSeat">
+		<property name="Extends" value="minibikeSeat"/>
+		<property name="CustomIcon" value="minibikeSeat"/>
+		<property name="CustomIconTint" value="20B2AA"/>
+		<property name="DescriptionKey" value="MinibikeSeatDesc"/>
+		<property name="Material" value="MmilitaryFiber"/>
+		<property class="Attributes">
+			<property name="VehiclePlayerStaminaDrainRate" value="1,0"/>
+			<property name="DegradationMax" value="500,7000"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="800"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+	<item id="287" name="FancyMinibikeSeat">
+		<property name="Extends" value="minibikeSeat"/>
+		<property name="CustomIcon" value="minibikeSeat"/>
+		<property name="CustomIconTint" value="B4EEB4"/>
+		<property name="DescriptionKey" value="MinibikeSeatDesc"/>
+		<property name="Material" value="MmilitaryFiber"/>
+		<property class="Attributes">
+			<property name="VehiclePlayerStaminaDrainRate" value="1,0"/>
+			<property name="DegradationMax" value="700,8000"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="1100"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+	<item id="1431" name="smallEngine">
+	<property name="PartType" value="Receiver"/>
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="VehicleSlotType" value="engine"/>
+	<property name="Material" value="Msteel"/>
+	<property name="RepairTools" value="repairKit"/>
+	<property name="HoldType" value="45"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Weight" value="100"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="Group" value="Resources"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property class="Attributes">
+		<property name="DegradationMax" value="1000,6000"/>
+		<property name="VehicleNoise" value="1,0.1"/>
+		<property name="VehicleMaxSpeed" value="5,18"/>
+		<property name="VehicleAcceleration" value="7,14"/>
+		<property name="VehicleMetersPerLiter" value="8,12"/>
+		<property name="VehicleIdleSecondsPerLiter" value="6,12"/>
+		<property name="VehicleStartDelayInSeconds" value="1,0.1"/>
+		<property name="VehicleStartChance" value="0.5,0.99"/>
+		<property name="VehicleTankSize" value="1000, 2000"/>
+	</property>
+	<property name="CraftingSkillGroup" value="craftSkillScience"/>
+</item>
+
+<item id="1432" name="carBattery">
+	<property name="Meshfile" value="Items/Misc/car_battery"/>
+	<property name="Material" value="lead"/>
+	<property name="RepairTools" value="repairKit"/>
+	<property name="HoldType" value="21"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="Weight" value="160"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="Group" value="Resources"/>
+	<property name="VehicleSlotType" value="battery"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property class="Attributes">
+		<property name="DegradationMax" value="1000,6000"/>
+		<property name="BatteryMaxLoadInVolts" value="24, 36"/>
+		<property name="BatteryDischargeTimeInMinutes" value="30,90"/>
+	</property>
+</item>
+	
+	<item id="288" name="SmallEnginetuned">
+		<property name="Extends" value="smallEngine"/>
+		<property name="CustomIcon" value="smallEngine"/>
+		<property name="CustomIconTint" value="20B2AA"/>
+		<property name="Material" value="Msteel"/>
+		<property name="Weight" value="50"/>
+		<property class="Attributes">
+			<property name="DegradationMax" value="7000,12000"/>
+			<property name="VehicleNoise" value="1.2,0.8"/>
+			<property name="VehicleMaxSpeed" value="12,24"/>
+			<property name="VehicleAcceleration" value="11,16"/>
+			<property name="VehicleMetersPerLiter" value="6,10"/>
+			<property name="VehicleIdleSecondsPerLiter" value="5,11"/>
+			<property name="VehicleStartDelayInSeconds" value="1,0.1"/>
+			<property name="VehicleStartChance" value="0.65,0.99"/>
+			<property name="VehicleTankSize" value="2000, 3500"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="1950"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	<item id="289" name="SmallEnginechiptuned">
+		<property name="Extends" value="smallEngine"/>
+		<property name="CustomIcon" value="smallEngine"/>
+		<property name="CustomIconTint" value="B4EEB4"/>
+		<property name="Material" value="Msteel"/>
+		<property name="Weight" value="30"/>
+		<property class="Attributes">
+			<property name="DegradationMax" value="4000,9000"/>
+			<property name="VehicleNoise" value="0.3,0.1"/>
+			<property name="VehicleMaxSpeed" value="8,18"/>
+			<property name="VehicleAcceleration" value="9,16"/>
+			<property name="VehicleMetersPerLiter" value="20,25"/>
+			<property name="VehicleIdleSecondsPerLiter" value="22,27"/>
+			<property name="VehicleStartDelayInSeconds" value="1,0.25"/>
+			<property name="VehicleStartChance" value="0.7,0.99"/>
+			<property name="VehicleTankSize" value="1500, 2500"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="1400"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+
+	<item id="290" name="cleanBattery">
+		<property name="Extends" value="carBattery"/>
+		<property name="CustomIcon" value="carBattery"/>
+		<property name="CustomIconTint" value="20B2AA"/>
+		<property name="Weight" value="180"/>
+		<property class="Attributes">
+			<property name="DegradationMax" value="7000,12000"/>
+			<property name="BatteryMaxLoadInVolts" value="30, 42"/>
+			<property name="BatteryDischargeTimeInMinutes" value="50,120"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="1100"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+	<item id="291" name="EFB-Battery">
+		<property name="Extends" value="carBattery"/>
+		<property name="CustomIcon" value="carBattery"/>
+		<property name="CustomIconTint" value="B4EEB4"/>
+		<property name="Weight" value="145"/>
+		<property class="Attributes">
+			<property name="DegradationMax" value="4000,9000"/>
+			<property name="BatteryMaxLoadInVolts" value="27, 39"/>
+			<property name="BatteryDischargeTimeInMinutes" value="70,140"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="800"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+<item id="292" name="MinibikeHandlebarsSteel">
+		<property name="Extends" value="minibikeHandlebars"/>
+		<property name="CustomIcon" value="minibikeHandlebars"/>
+		<property name="CustomIconTint" value="20B2AA"/>
+		<property name="DescriptionKey" value="MinibikeHandlebarsDesc"/>
+		<property class="Attributes">
+			<property name="VehicleSteering" value="3,3"/>
+			<property name="VehicleMaxSteeringAngle" value="10.5,10.5"/>
+			<property name="VehicleBraking" value="26,26"/>
+			<property name="LightIntensity" value="0.25,1"/>
+			<property name="DegradationMax" value="500,7000"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+	<item id="293" name="FancyMinibikeHandlebars">
+		<property name="Extends" value="minibikeHandlebars"/>
+		<property name="CustomIcon" value="minibikeHandlebars"/>
+		<property name="CustomIconTint" value="B4EEB4"/>
+		<property name="DescriptionKey" value="MinibikeHandlebarsDesc"/>
+		<property name="Material" value="Msteel"/>
+		<property class="Attributes">
+			<property name="VehicleSteering" value="3,3"/>
+			<property name="VehicleMaxSteeringAngle" value="11,11"/>
+			<property name="VehicleBraking" value="27,27"/>
+			<property name="LightIntensity" value="0.5,1.5"/>
+			<property name="DegradationMax" value="700,8000"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="EconomicValue" value="825"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
+	<item id="294" name="HandlebarsSteel">
+		<property name="Extends" value="partsMaster"/>
+		<property name="CustomIcon" value="partsHandlebars"/>
+			<property name="CustomIconTint" value="20B2AA"/>
+		<property name="PartType" value="Pump"/>
+		<property class="Attributes">
+			<property name="DegradationRate" value="3,3"/>
+			<property name="DegradationMax" value="6000,9000"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="CraftingIngredientExp" value="0"/>
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="EconomicValue" value="500"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	<item id="295" name="FancyHandlebars">
+		<property name="Extends" value="partsMaster"/>
+		<property name="CustomIcon" value="partsHandlebars"/>
+		<property name="CustomIconTint" value="B4EEB4"/>
+		<property name="Material" value="Msteel"/>
+		<property name="PartType" value="Pump"/>
+		<property class="Attributes">
+			<property name="DegradationRate" value="3,3"/>
+			<property name="DegradationMax" value="9000,12000"/>
+		</property>
+		<property name="Group" value="Tools/Traps"/>
+		<property name="Categories" value="Minibike"/>
+		<property name="Categories_UI" value="ui_game_symbol_minibike"/>
+		<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+		<property name="CraftingIngredientExp" value="0"/>
+		<property name="CraftingIngredientTime" value="5"/>
+		<property name="EconomicValue" value="750"/>
+		<property name="SellableToTrader" value="false"/>
+	</item>
+	
 <!-- * * * * * * * * * * armor tiers * * * * * * * * * * -->
 
 <item id="350" name="plantFiberPants"> <!-- armorMasterPlantFiberClothes -->
@@ -6144,6 +6898,42 @@ Mesh files no longer used:
 	<property name="ActionExp" value="10"/>
 </item>
 
+<item id="651" name="improvedsplint">
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="CustomIcon" value="splint" />
+	<property name="CustomIconTint" value="90EE90" />
+	<property name="Material" value="wood"/>
+	<property name="HoldType" value="45"/>
+	<property name="Stacknumber" value="250"/> <!-- STK loot -->
+	<property name="FuelValue" value="18"/>
+	<property name="EconomicValue" value="10"/>
+	<property class="Action0">
+		<property name="Class" value="UseOther"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="0"/>
+		<property name="Gain_food" value="0"/>
+		<property name="Gain_water" value="0"/>
+		<property name="Sound_start" value="player_bandage"/>
+		<property name="Buff" value="improvedsplint"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="0"/>
+		<property name="Gain_food" value="0"/>
+		<property name="Gain_water" value="0"/>
+		<property name="Sound_start" value="player_bandage"/>
+		<property name="Buff" value="splint"/>
+	</property>
+	<property name="Group" value="Science"/>
+	<property name="ActionSkillGroup" value="Medicine"/>
+	<property name="CraftingSkillGroup" value="craftSkillMiscellaneous"/>
+	<property name="ActionExp" value="10"/>
+</item>
+
 <item id="655" name="aloeCream">
 	<property name="Meshfile" value="Items/Food/aloeCreamPrefab"/>
 	<property name="Material" value="organic"/>
@@ -7619,12 +8409,59 @@ Mesh files no longer used:
 	<property name="Group" value="Resources,Food/Cooking"/>
 </item>
 
+<item id="794" name="Schmidtbier">
+	<property name="Meshfile" value="Items/Food/bottledBeerPrefab"/>
+	<property name="Material" value="glass"/>
+	<property name="HoldType" value="3"/>
+	<property name="Weight" value="10"/>
+	<property name="CustomIcon" value="beer"/>
+	<property name="Stacknumber" value="15"/> <!-- STK drink -->
+	<property name="EconomicValue" value="100"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="2"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="1"/>
+		<property name="Gain_stamina" value="5"/>
+		<property name="Gain_food" value="+1"/>
+		<property name="Gain_water" value="-2"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Buff" value="DrinkBeer,extinguishFireBuff"/>
+		<property name="Create_item" value="emptyJar"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
+<item id="795" name="MacceruTea">
+	<property name="Meshfile" value="Items/Food/redTeaPrefab"/>
+	<property name="CustomIcon" value="redTea"/>
+	<property name="Material" value="glass"/>
+	<property name="HoldType" value="3"/>
+	<property name="Weight" value="10"/>
+	<property name="Stacknumber" value="15"/> <!-- STK drink -->
+	<property name="EconomicValue" value="36"/>
+	<property class="Action1">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_food" value="0"/>
+		<property name="Gain_water" value="20"/>
+		<property name="Gain_stamina" value="40"/>
+		<property name="Gain_wellness" value="0.2"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Buff" value="stewWarming ,extinguishFireBuff"/>
+		<property name="Debuff" value="dysentery"/>
+		<property name="Create_item" value="emptyJar"/>
+	</property>
+	<property name="Group" value="Food/Cooking"/>
+</item>
+
 <!-- * * * * * * * * * * recipes, books, and schematics * * * * * * * * * * -->
 
 <item id="900" name="schematicMaster">
 	<property name="CreativeMode" value="None"/>
 	<property name="Meshfile" value="Items/Misc/Book"/>
-	<property name="Material" value="paper"/>
+	<property name="Material" value="printedPaper"/>
 	<property name="HoldType" value="21"/>
 	<property name="Weight" value="5"/>
 	<property name="FuelValue" value="5"/>
@@ -7666,7 +8503,7 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
-		<property name="Recipes_to_learn" value="sledgehammer"/>
+		<property name="Recipes_to_learn" value="sledgehammer, sledgehammerSteel, astralhammer"/>
 		<!-- <property name="Skills_to_gain" value="craftSkillWeapons"/> -->
 	</property>
 </item>
@@ -7683,6 +8520,15 @@ Mesh files no longer used:
 	<property name="Extends" value="schematicMaster"/>
 	<property class="Action1">
 		<property name="Recipes_to_learn" value="plantedHop1,beer,signShopColdBeer"/>
+		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+	</property>
+</item>
+
+<item id="914" name="SchmidtbierBook">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="beerBook" />
+	<property class="Action1">
+		<property name="Recipes_to_learn" value="plantedHop1,Schmidtbier,signShopColdBeer"/>
 		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
 	</property>
 </item>
@@ -7817,6 +8663,18 @@ Mesh files no longer used:
 		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
 	</property>
 </item>
+
+<item id="947" name="shockingCrossbowBoltSchematic"> <!-- ammo crafting -->
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="explodingCrossbowBoltSchematic"/>
+	<property name="CustomIconTint" value="20B2AA"/>
+	<property name="EconomicValue" value="500"/>
+	<property class="Action1">
+		<property name="Recipes_to_learn" value="shockingCrossbowBolt"/>
+		<!-- <property name="Skills_to_gain" value="craftSkillScience"/> -->
+	</property>
+</item>
+
 <!--
 <item id="950" name="ammunitionNationBook"> NO LONGER USED
 	<property name="Extends" value="schematicMaster"/>
@@ -7996,6 +8854,35 @@ Mesh files no longer used:
 	</property>
 </item>
 
+<item id="993" name="ActofPolishing">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="schematicMaster"/>
+	<property name="EconomicValue" value="2000"/>
+	<property class="Action1">
+		<!-- <property name="Recipes_to_learn" value="batterybank"/> -->
+		<property name="Recipes_to_learn" value="fireaxeSteelpolished,pickaxeSteelpolished,shovelSteelpolished"/>
+	</property>
+</item>
+
+<item id="994" name="simpleWeaponImprovements">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="schematicMaster"/>
+	<property name="EconomicValue" value="2000"/>
+	<property class="Action1">
+		<!-- <property name="Recipes_to_learn" value="batterybank"/> -->
+		<property name="Recipes_to_learn" value="gunHuntingRifleScope, gunfireMP5, crossbowscope, extMagazineCrossbow"/>
+	</property>
+</item>
+
+<item id="995" name="astralhammerschematics">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="schematicMaster"/>
+	<property name="EconomicValue" value="2000"/>
+	<property class="Action1">
+		<!-- <property name="Recipes_to_learn" value="batterybank"/> -->
+		<property name="Recipes_to_learn" value="astralhammer"/>
+	</property>
+</item>
 <!--
 <item id="1000" name="setInConcrete">
 	<property name="Extends" value="schematicMaster"/>
@@ -8026,6 +8913,26 @@ Mesh files no longer used:
 	<property name="EconomicValue" value="500"/>
 	<property class="Action1">
 		<property name="Recipes_to_learn" value="minibikeChassis,minibikeSeat,minibikeHandlebars"/>
+	</property>
+</item>
+
+<item id="1004" name="minibikesForDumbshitsSteeledition">
+	<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="minibikesForDumbshits"/>
+		<property name="CustomIconTint" value="20B2AA"/>
+	<property name="EconomicValue" value="500"/>
+	<property class="Action1">
+		<property name="Recipes_to_learn" value="minibikeChassisSteel,minibikeSeatSteel,minibikeHandlebarsSteel,cleanBattery,SmallEnginetuned"/>
+	</property>
+</item>
+
+<item id="1005" name="FancyminibikesForDumbshits">
+	<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="minibikesForDumbshits"/>
+		<property name="CustomIconTint" value="B4EEB4"/>
+	<property name="EconomicValue" value="500"/>
+	<property class="Action1">
+		<property name="Recipes_to_learn" value="FancyminibikeChassis,FancyminibikeSeat,FancyminibikeHandlebars,EFB-Battery,SmallEnginechiptuned"/>
 	</property>
 </item>
 
@@ -8171,6 +9078,16 @@ Mesh files no longer used:
 	</property>
 </item>
 
+<item id="1026" name="improvedsplintSchematic"> <!-- ironArmorSchematic -->
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="schematicMaster" />
+	<property name="CustomIconTint" value="90EE90" />
+	<property class="Action1">
+		<property name="Recipes_to_learn" value="improvedsplint"/>
+		<!-- <property name="Skills_to_gain" value="craftSkillArmor"/> -->
+	</property>
+</item>
+
 <!-- * * * * * * * * * * quests * * * * * * * * * * -->
 
 <item id="1150" name="questMaster">
@@ -8212,6 +9129,13 @@ Mesh files no longer used:
 	<property name="Extends" value="questMaster"/>
 	<property class="Action1">
 		<property name="QuestGiven" value="quest_BasicSurvival1"/>
+	</property>
+</item>
+
+<item id="1161" name="self-writtenBook">
+	<property name="Extends" value="questMaster"/>
+	<property class="Action1">
+		<property name="QuestGiven" value="BookWriting"/>
 	</property>
 </item>
 
@@ -8327,7 +9251,6 @@ Mesh files no longer used:
 
 <item id="1195" name="qc_buythefarm">
 	<property name="Extends" value="challengeQuestMaster"/>
-	<property name="DescriptionKey" value="qc_AnimalGroupDesc"/>
 	<property class="Action1">
 		<property name="QuestGiven" value="challenge_buythefarm"/>
 	</property>
@@ -8717,6 +9640,22 @@ Mesh files no longer used:
 	<property name="PickupJournalEntry" value="farmingTip"/>
 </item>
 
+<item id="1326" name="sulfuricAcid">
+	<property name="Extends" value="bottledWater"/>
+	<property name="CustomIcon" value="grainAlcohol"/>
+	<property name="CustomIconTint" value="EEEE00"/>
+	<property name="EconomicValue" value="100"/>
+	<property name="CraftingIngredientTime" value="5"/>
+	<property class="Action1">
+		<property name="Delay" value="1.5"/>
+		<property name="Gain_stamina" value="-20"/>
+		<property name="Gain_food" value="-30"/>
+		<property name="Gain_water" value="-30"/>
+		<property name="Gain_health" value="-50"/>
+	</property>
+	<property name="Group" value="Science"/>
+</item>
+
 <item id="1327" name="cloth"> <!-- scrap material -->
 	<property name="Meshfile" value="Items/Crafting/cloth"/>
 	<property name="Material" value="cloth"/>
@@ -8742,17 +9681,18 @@ Mesh files no longer used:
 	<property name="EconomicBundleSize" value="5"/>
 	<property name="Group" value="Resources"/>
 </item>
-<!--
-<item id="1329" name="book">
+
+<item id="1329" name="emptyBook">
 	<property name="Meshfile" value="Items/Misc/Book"/>
 	<property name="Material" value="paper"/>
+	<property name="CustomIcon" value="schematicMaster"/>
 	<property name="HoldType" value="21"/>
 	<property name="Stacknumber" value="50"/>
 	<property name="FuelValue" value="20"/>
 	<property name="Weight" value="20"/>
 	<property name="Group" value="Decor/Miscellaneous"/>
 </item>
--->
+
 <item id="1330" name="militaryFiber"> <!-- scrap material -->
 	<property name="Meshfile" value="Items/Crafting/cloth"/>
 	<property name="Material" value="MmilitaryFiber"/>
@@ -8927,6 +9867,37 @@ Mesh files no longer used:
 	<property name="EconomicBundleSize" value="5"/>
 	<property name="Group" value="Resources,Ammo/Weapons"/>
 	<property name="CraftingSkillGroup" value="craftSkillWeapons"/>
+</item>
+
+<item id="1343" name="newsprint">
+	<property name="Extends" value="bottledWater"/>
+	<property name="CustomIcon" value="coffee"/>
+	<property name="CustomIconTint" value="080808"/>
+	<property name="EconomicValue" value="100"/>
+	<property name="CraftingIngredientTime" value="5"/>
+	<property class="Action1">
+		<property name="Delay" value="1.5"/>
+		<property name="Gain_stamina" value="-30"/>
+		<property name="Gain_food" value="-10"/>
+		<property name="Gain_water" value="10"/>
+		<property name="Gain_health" value="-20"/>
+	</property>
+	<property name="Group" value="Science"/>
+</item>
+
+<item id="1344" name="printedPaper"> <!-- scrap material -->
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+	<property name="CustomIcon" value="paper"/>
+	<property name="CustomIconTint" value="303030"/>
+	<property name="HoldType" value="45"/>
+	<property name="Material" value="printedPaper"/>
+	<property name="Stacknumber" value="250"/> <!-- STK resource -->
+	<property name="FuelValue" value="1"/>
+	<property name="Weight" value="1"/>
+	<property name="EconomicValue" value="15"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="Group" value="Resources"/>
 </item>
 
 <item id="1345" name="coal">
@@ -9414,51 +10385,6 @@ Mesh files no longer used:
 	<property name="Group" value="Basics,Decor/Miscellaneous"/>
 </item>
 
-<item id="1431" name="smallEngine">
-	<property name="PartType" value="Receiver"/>
-	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
-	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-	<property name="VehicleSlotType" value="engine"/>
-	<property name="Material" value="Msteel"/>
-	<property name="RepairTools" value="repairKit"/>
-	<property name="HoldType" value="45"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="Weight" value="100"/>
-	<property name="EconomicValue" value="1000"/>
-	<property name="Group" value="Resources"/>
-	<property name="DegradationBreaksAfter" value="false"/>
-	<property class="Attributes">
-		<property name="DegradationMax" value="1000,6000"/>
-		<property name="VehicleNoise" value="1,0.1"/>
-		<property name="VehicleMaxSpeed" value="5,18"/>
-		<property name="VehicleAcceleration" value="7,14"/>
-		<property name="VehicleMetersPerLiter" value="8,12"/>
-		<property name="VehicleIdleSecondsPerLiter" value="6,12"/>
-		<property name="VehicleStartDelayInSeconds" value="1,0.1"/>
-		<property name="VehicleStartChance" value="0.5,0.99"/>
-		<property name="VehicleTankSize" value="1000, 2000"/>
-	</property>
-	<property name="CraftingSkillGroup" value="craftSkillScience"/>
-</item>
-
-<item id="1432" name="carBattery">
-	<property name="Meshfile" value="Items/Misc/car_battery"/>
-	<property name="Material" value="lead"/>
-	<property name="RepairTools" value="repairKit"/>
-	<property name="HoldType" value="21"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="Weight" value="160"/>
-	<property name="EconomicValue" value="500"/>
-	<property name="Group" value="Resources"/>
-	<property name="VehicleSlotType" value="battery"/>
-	<property name="DegradationBreaksAfter" value="false"/>
-	<property class="Attributes">
-		<property name="DegradationMax" value="1000,6000"/>
-		<property name="BatteryMaxLoadInVolts" value="24, 36"/>
-		<property name="BatteryDischargeTimeInMinutes" value="30,90"/>
-	</property>
-</item>
-
 <item id="1434" name="headlight">
 	<property name="VehicleSlotType" value="headlight"/>
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
@@ -9656,7 +10582,136 @@ Mesh files no longer used:
 	<property name="CreativeMode" value="None" />
 </item>
 
+<item id="1466" name="Unload">
+	<property name="CreativeMode" value="None"/>
+	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
+	<property name="Material" value="lead"/>
+	<property name="HoldType" value="45"/>
+	<property name="Stacknumber" value="500"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property class="Attributes">
+		<property name="GetQualityFromWeapon" value="true"/>
+		<property name="EntityDamage" value="0"/>
+		<property name="BlockDamage" value="0"/>
+	</property>
+	<property name="Categories" value="Resources"/>
+	<property name="Categories_UI" value="ui_game_symbol_advancedtoolsmithing"/>
+</item>
 
+<item id="1467" name="Flexibility_and_Security">
+	<property name="Extends" value="schematicMaster"/>
+	<property name="CustomIcon" value="schematicMaster" />
+	<property class="Action1">
+		<property name="Skills_to_gain" value="Athletics,Athletics"/>
+	</property>
+</item>
+<item id="1468" name="Oppertunismus_und_Repression">
+	<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+				<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Blunt Weapons,Blunt Weapons"/>
+	</property>
+</item>
+<item id="1469" name="Tusculanae_disputationes">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Blade Weapons,Blade Weapons"/>
+		
+		</property>
+</item>
+<item id="1470" name="Im_Westen_nichts_Neues">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Mining Tools,Mining Tools"/>		
+		</property>
+</item>
+<item id="1471" name="Vojna_i_mir">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Construction Tools,Construction Tools"/>
+		</property>
+</item>
+<item id="1472" name="Zum_ewigen_Frieden.Ein_philosophischer_Entwurf">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Pistols,Pistols"/>
+		</property>
+</item>
+<item id="1473" name="The_Invisible_Man">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Clothing/Armor,Clothing/Armor"/>
+		</property>
+</item>
+<item id="1474" name="A_Brief_History_of_Time">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Medicine,Medicine"/>
+		</property>
+</item>
+<item id="1475" name="Divina_Commedia">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Shotguns,Shotguns"/>
+		</property>
+</item>
+<item id="1476" name="The_Old_Man_and_the_Sea">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Rifles,Rifles"/>
+		</property>
+</item>
+<item id="1477" name="Malleus_maleficarum">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Archery,Archery"/>
+		</property>
+</item>
+<item id="1478" name="Vingt_mille_lieues_sous_les_mers">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Medicine,Medicine"/>
+		</property>
+	</item>	
+<item id="1479" name="An_Inquiry_into_the__Nature_and_Causes_of_the_Wealth_of_Nations">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Barter,Barter"/>
+		</property>
+	</item>		
+	
+<item id="1480" name="Das_Kapital">
+		<property name="Extends" value="schematicMaster"/>
+		<property name="CustomIcon" value="schematicMaster" />
+		<property name="DescriptionKey" value="Flexibility_and_SecurityDesc" />
+		<property class="Action1">
+			<property name="Skills_to_gain" value="Scavenging,Scavenging"/>
+		</property>
+	</item>		
+	
 <!--
 <item id="1501" name="superWrench">
 	<property name="Extends" value="wrench"/>

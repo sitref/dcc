@@ -368,11 +368,44 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFootballPlayerRadiated -->
+<entity_class name="zombieFootballPlayerRadiated" extends="zombieFootballPlayer">
+	<property name="MaxHealth" value="400"/>
+	<property name="HandItem" value="handZombieFootballPlayer"/>
+	<property name="WanderSpeed" value="0.75"/>
+	<property name="ApproachSpeed" value="1.15"/>
+	<property name="NightWanderSpeed" value="0.75"/>
+	<property name="NightApproachSpeed" value="1.15"/>
+	<property name="ExperienceGain" value="1039"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
-<!-- Missing: zombieFootballPlayerFeral -->
+<entity_class name="zombieFootballPlayerFeral" extends="zombieFootballPlayer">
+	<property name="MaxHealth" value="400"/>
+	<property name="HandItem" value="handZombieFootballPlayer"/>
+	<property name="WanderSpeed" value="0.9"/>
+	<property name="ApproachSpeed" value="1.5"/>
+	<property name="NightWanderSpeed" value="0.9"/>
+	<property name="NightApproachSpeed" value="1.5"/>
+	<property name="ExperienceGain" value="2039"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+</entity_class>
 
-<!-- Missing: zombieFootballPlayerFeralRadiated -->
+<entity_class name="zombieFootballPlayerFeralRadiated" extends="zombieFootballPlayer">
+	<property name="MaxHealth" value="800"/>
+	<property name="HandItem" value="handZombieFootballPlayer"/>
+	<property name="WanderSpeed" value="0.9"/>
+	<property name="ApproachSpeed" value="1.5"/>
+	<property name="NightWanderSpeed" value="0.9"/>
+	<property name="NightApproachSpeed" value="1.5"/>
+	<property name="ExperienceGain" value="4039"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+</entity_class>
+
 
 <entity_class name="zombieFemaleFat" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardFatLadyZRagdoll"/>
@@ -402,7 +435,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFemaleFatRadiated -->
+<entity_class name="zombieFemaleFatRadiated" extends="zombieFemaleFat">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="400"/>
+	<property name="ExperienceGain" value="2091"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieFemaleFatFeral" extends="zombieFemaleFat">
 	<property name="HandItem" value="handZombieStrongFeral"/>
@@ -415,7 +455,20 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFemaleFatFeralRadiated -->
+<entity_class name="zombieFemaleFatFeralRadiated" extends="zombieFemaleFat">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="700"/>
+	<property name="ExperienceGain" value="4091"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="LootListOnDeath" value="85"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
+
 
 <entity_class name="zombieJoe" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardJoeRagdoll"/>
@@ -535,7 +588,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieScreamerRadiated -->
+<entity_class name="zombieScreamerRadiated" extends="zombieScreamer">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="250"/>
+	<property name="ExperienceGain" value="1039"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieScreamerFeral" extends="zombieScreamer">
 	<property name="HandItem" value="handZombieFeral"/>
@@ -547,7 +607,18 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieScreamerFeralRadiated -->
+<entity_class name="zombieScreamerFeralRadiated" extends="zombieScreamer">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="500"/>
+	<property name="ExperienceGain" value="2039"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 <entity_class name="zombieDarlene" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardDarleneRagdoll"/>
@@ -684,7 +755,15 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieSteveCrawlerRadiated -->
+<entity_class name="zombieSteveCrawlerRadiated" extends="zombieSteveCrawler">
+	<property name="HandItem" value="handZombie02Feral"/>
+	<property name="MaxHealth" value="200"/>
+	<property name="ExperienceGain" value="1039"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
+
 
 <entity_class name="zombieSteveCrawlerFeral" extends="zombieSteveCrawler">
 	<property name="HandItem" value="handZombie02Feral"/>
@@ -695,7 +774,18 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieSteveCrawlerFeralRadiated -->
+<entity_class name="zombieSteveCrawlerFeralRadiated" extends="zombieSteveCrawler">
+	<property name="HandItem" value="handZombie02Feral"/>
+	<property name="MaxHealth" value="400"/>
+	<property name="ExperienceGain" value="2039"/>
+	<property name="LootListOnDeath" value="38"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
+
 
 <entity_class name="zombieBusinessMan" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardSuitRagdoll"/>
@@ -708,7 +798,15 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieBusinessManRadiated -->
+<entity_class name="zombieBusinessManRadiated" extends="zombieBusinessMan">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="250"/>
+	<property name="ExperienceGain" value="1039"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
+
 
 <entity_class name="zombieBusinessManFeral" extends="zombieBusinessMan">
 	<property name="HandItem" value="handZombieFeral"/>
@@ -720,7 +818,19 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieBusinessManFeralRadiated -->
+<entity_class name="zombieBusinessManFeralRadiated" extends="zombieBusinessMan">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="500"/>
+	<property name="ExperienceGain" value="2039"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
+
 
 <entity_class name="zombieSnow" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardSnowRagdoll"/>
@@ -743,7 +853,15 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieSnowRadiated -->
+<entity_class name="zombieSnowRadiated" extends="zombieSnow">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="600"/>
+	<property name="ExperienceGain" value="2916"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
+
 
 <entity_class name="zombieSnowFeral" extends="zombieSnow">
 	<property name="HandItem" value="handZombieStrongFeral"/>
@@ -756,7 +874,20 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieSnowFeralRadiated -->
+<entity_class name="zombieSnowFeralRadiated" extends="zombieSnow">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="1200"/>
+	<property name="ExperienceGain" value="4916"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="LootListOnDeath" value="66"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
+
 
 <entity_class name="zombieSpider" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardSpiderRagdoll"/>
@@ -791,7 +922,15 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieSpiderRadiated -->
+<entity_class name="zombieSpiderRadiated" extends="zombieSpider">
+	<property name="HandItem" value="handZombie02Feral"/>
+	<property name="MaxHealth" value="300"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/spider_rad"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
+
 
 <entity_class name="zombieSpiderFeral" extends="zombieSpider">
 	<property name="HandItem" value="handZombie02Feral"/>
@@ -832,11 +971,39 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieBurntRadiated -->
+<entity_class name="zombieBurntRadiated" extends="zombieBurnt">
+	<property name="HandItem" value="handZombieBurningFeral"/>
+	<property name="MaxHealth" value="250"/>
+	<property name="ExperienceGain" value="1039"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/p_onFire" param1="SetShapeToMesh0"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
-<!-- Missing: zombieBurntFeral -->
+<entity_class name="zombieBurntFeral" extends="zombieBurnt">
+	<property name="HandItem" value="handZombieBurningFeral"/>
+	<property name="MaxHealth" value="250"/>
+	<property name="ExperienceGain" value="1039"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
-<!-- Missing: zombieBurntFeralRadiated -->
+<entity_class name="zombieBurntFeralRadiated" extends="zombieBurnt">
+	<property name="HandItem" value="handZombieBurningFeral"/>
+	<property name="MaxHealth" value="500"/>
+	<property name="ExperienceGain" value="2039"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/p_onFire" param1="SetShapeToMesh0"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 
 <entity_class name="zombieNurse" extends="zombieTemplateMale">
@@ -858,7 +1025,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieNurseRadiated -->
+<entity_class name="zombieNurseRadiated" extends="zombieNurse">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="250"/>
+	<property name="ExperienceGain" value="1039"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieNurseFeral" extends="zombieNurse">
 	<property name="HandItem" value="handZombieFeral"/>
@@ -871,7 +1045,20 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieNurseFeralRadiated -->
+<entity_class name="zombieNurseFeralRadiated" extends="zombieNurse">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="500"/>
+	<property name="ExperienceGain" value="2039"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="LootListOnDeath" value="38"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
+
 
 <entity_class name="zombieFatHawaiian" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardHawaiianRagdoll"/>
@@ -897,7 +1084,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFatHawaiianRadiated -->
+<entity_class name="zombieFatHawaiianRadiated" extends="zombieFatHawaiian">
+	<property name="HandItem" value="handZombieCopFeral"/>
+	<property name="MaxHealth" value="950"/>
+	<property name="ExperienceGain" value="4334"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieFatHawaiianFeral" extends="zombieFatHawaiian">
 	<property name="HandItem" value="handZombieCopFeral"/>
@@ -910,7 +1104,20 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFatHawaiianFeralRadiated -->
+<entity_class name="zombieFatHawaiianFeralRadiated" extends="zombieFatHawaiian">
+	<property name="HandItem" value="handZombieCopFeral"/>
+	<property name="MaxHealth" value="1850"/>
+	<property name="ExperienceGain" value="8334"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="LootListOnDeath" value="38"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
+
 
 <entity_class name="zombieFatCop" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardCopRagdoll"/>
@@ -966,7 +1173,17 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFatCopRadiated -->
+<entity_class name="zombieFatCopRadiated" extends="zombieFatCop">
+	<property name="HandItem" value="handZombieCopFeral"/>
+	<property name="MaxHealth" value="850"/>
+	<property name="Explosion.BlockDamage" value="850"/>
+	<property name="Explosion.EntityDamage" value="200"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/cop_rad"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
+
 
 <entity_class name="zombieFatCopFeral" extends="zombieFatCop">
 	<property name="HandItem" value="handZombieCopFeral"/>
@@ -985,7 +1202,7 @@
 	<property name="ExperienceGain" value="6042"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="ReplaceMaterial0" value="entities/zombies/materials/cop_rad"/>
-	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
 	<property name="Buffs" value="zombieRadiatedBuff80"/>
 	<property name="Explosion.BlockDamage" value="750"/>
 	<property name="Explosion.EntityDamage" value="250"/>
@@ -1001,11 +1218,47 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieMaleHazmatRadiated -->
+<entity_class name="zombieMaleHazmatRadiated" extends="zombieBoe">
+	<property name="Mesh" value="Zombies/zombieStandardHazmatRagdoll"/>
+	<property name="HandItem" value="handZombieHazMatFeral"/>
+	<property name="MaxHealth" value="400"/>
+	<property name="ExperienceGain" value="2334"/>
+	<property name="LootListOnDeath" value="65"/>
+	<property name="WalkType" value="7"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+</entity_class>
 
-<!-- Missing: zombieMaleHazmatFeral -->
+<entity_class name="zombieMaleHazmatFeral" extends="zombieBoe">
+	<property name="Mesh" value="Zombies/zombieStandardHazmatRagdoll"/>
+	<property name="HandItem" value="handZombieHazMatFeral"/>
+	<property name="MaxHealth" value="400"/>
+	<property name="ExperienceGain" value="2334"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="LootListOnDeath" value="65"/>
+	<property name="WalkType" value="7"/>
+		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
-<!-- Missing: zombieMaleHazmatFeralRadiated -->
+<entity_class name="zombieMaleHazmatFeralRadiated" extends="zombieBoe">
+	<property name="Mesh" value="Zombies/zombieStandardHazmatRagdoll"/>
+	<property name="HandItem" value="handZombieHazMatFeral"/>
+	<property name="MaxHealth" value="800"/>
+	<property name="ExperienceGain" value="4334"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="LootListOnDeath" value="65"/>
+	<property name="WalkType" value="7"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+		<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+</entity_class>
 
 <entity_class name="zombieUtilityWorker" extends="zombieTemplateMale">
 	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
@@ -1028,7 +1281,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieUtilityWorkerRadiated -->
+<entity_class name="zombieUtilityWorkerRadiated" extends="zombieUtilityWorker">
+	<property name="MaxHealth" value="400"/>
+	<property name="ExperienceGain" value="2091"/>
+	<property name="HandItem" value="handZombieWorkerFeral"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieUtilityWorkerFeral" extends="zombieUtilityWorker">
 	<property name="MaxHealth" value="400"/>
@@ -1040,7 +1300,18 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieUtilityWorkerFeralRadiated -->
+<entity_class name="zombieUtilityWorkerFeralRadiated" extends="zombieUtilityWorker">
+	<property name="MaxHealth" value="800"/>
+	<property name="ExperienceGain" value="4091"/>
+	<property name="HandItem" value="handZombieWorkerFeral"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 <entity_class name="zombieSoldier" extends="zombieTemplateMale">
 	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
@@ -1062,7 +1333,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieSoldierRadiated -->
+<entity_class name="zombieSoldierRadiated" extends="zombieSoldier">
+	<property name="MaxHealth" value="650"/>
+	<property name="ExperienceGain" value="3429"/>
+	<property name="HandItem" value="handZombieCopFeral"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieSoldierFeral" extends="zombieSoldier">
 	<property name="MaxHealth" value="650"/>
@@ -1074,7 +1352,18 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieSoldierFeralRadiated -->
+<entity_class name="zombieSoldierFeralRadiated" extends="zombieSoldier">
+	<property name="MaxHealth" value="1250"/>
+	<property name="ExperienceGain" value="6429"/>
+	<property name="HandItem" value="handZombieCopFeral"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 <entity_class name="zombieSkateboarder" extends="zombieBoe">
 	<property name="MaxHealth" value="150"/>
@@ -1146,7 +1435,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieOldTimerRadiated -->
+<entity_class name="zombieOldTimerRadiated" extends="zombieOldTimer">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="300"/>
+	<property name="ExperienceGain" value="1556"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieOldTimerFeral" extends="zombieOldTimer">
 	<property name="HandItem" value="handZombieFeral"/>
@@ -1160,7 +1456,20 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieOldTimerFeralRadiated -->
+<entity_class name="zombieOldTimerFeralRadiated" extends="zombieOldTimer">
+	<property name="HandItem" value="handZombieFeral"/>
+	<property name="MaxHealth" value="600"/>
+	<property name="ExperienceGain" value="3056"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="LootListOnDeath" value="38"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<property name="LootListOnDeath" value="81"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 <entity_class name="zombieBiker" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardBikerRagdoll"/>
@@ -1172,11 +1481,37 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieBikerRadiated -->
+<entity_class name="zombieBikerRadiated" extends="zombieBiker">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="900"/>
+	<property name="ExperienceGain" value="3091"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
-<!-- Missing: zombieBikerFeral -->
+<entity_class name="zombieBikerFeral" extends="zombieBiker">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="900"/>
+	<property name="ExperienceGain" value="3091"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
-<!-- Missing: zombieBikerFeralRadiated -->
+<entity_class name="zombieBikerFeralRadiated" extends="zombieBiker">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="1800"/>
+	<property name="ExperienceGain" value="6091"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 <entity_class name="zombieFarmer" extends="zombieTemplateMale">
 	<property name="Mesh" value="Zombies/zombieStandardFarmerRagdoll"/>
@@ -1189,7 +1524,14 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFarmerRadiated -->
+<entity_class name="zombieFarmerRadiated" extends="zombieFarmer">
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="450"/>
+	<property name="ExperienceGain" value="1556"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieFarmerFeral" extends="zombieFarmer">
 	<property name="Mesh" value="Zombies/zombieStandardFarmerRagdoll"/>
@@ -1205,7 +1547,22 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieFarmerFeralRadiated -->
+<entity_class name="zombieFarmerFeralRadiated" extends="zombieFarmer">
+	<property name="Mesh" value="Zombies/zombieStandardFarmerRagdoll"/>
+	<property name="HandItem" value="handZombieStrongFeral"/>
+	<property name="MaxHealth" value="900"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<property name="ExperienceGain" value="3056"/>
+	<property name="LootListOnDeath" value="85"/>
+	<property name="WalkType" value="6"/>
+	<property name="TintMaterial1" value="84,84,84"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 <entity_class name="zombieStripper" extends="zombieDarlene">
 	<property name="Mesh" value="Zombies/zombieStandardStripperRagdoll"/>
@@ -1216,7 +1573,15 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieStripperRadiated -->
+<entity_class name="zombieStripperRadiated" extends="zombieStripper">
+	<property name="Mesh" value="Zombies/zombieStandardStripperRagdoll"/>
+	<property name="HandItem" value="handZombieStripperFeral"/>
+	<property name="MaxHealth" value="350"/>
+	<property name="ExperienceGain" value="1556"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/rad_eye"/>
+	<property name="Buffs" value="zombieRadiatedBuff40"/>
+</entity_class>
 
 <entity_class name="zombieStripperFeral" extends="zombieStripper">
 	<property name="Mesh" value="Zombies/zombieStandardStripperRagdoll"/>
@@ -1229,8 +1594,19 @@
 	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 </entity_class>
 
-<!-- Missing: zombieStripperFeralRadiated -->
-
+<entity_class name="zombieStripperFeralRadiated" extends="zombieStripper">
+	<property name="Mesh" value="Zombies/zombieStandardStripperRagdoll"/>
+	<property name="HandItem" value="handZombieStripperFeral"/>
+	<property name="MaxHealth" value="700"/>
+	<property name="ExperienceGain" value="3056"/>
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="ReplaceMaterial0" value="entities/zombies/materials/feral_rad"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+	<property name="ReplaceMaterial1" value="entities/zombies/materials/feral_eye"/>
+	<property name="ApproachSpeed" value="1.35"/>
+	<property name="NightApproachSpeed" value="1.35"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
+</entity_class>
 
 <!--<entity_class name="zombieUMATemplateMale" extends="zombieTemplateMale">
 	<property name="EntityType" value="Zombie"/>
@@ -1297,7 +1673,7 @@
 	<property name="AITask-3" value="RunawayFromEntity" param1="EntityPlayer"/>
 	<property name="AITask-4" value="RunawayFromEntity" param1="EntityZombie"/>
 	<property name="AITask-5" value="Wander"/>
-	<property name="CanClimbLadders" value="false"/>
+	<property name="CanClimbLadders" value="true"/>
 	<property name="MaxHealth" value="40"/>
 	<property name="MaxViewAngle" value="60"/>
 	<property name="WanderSpeed" value="0.4"/>
@@ -1542,6 +1918,10 @@
 	<drop event="Harvest" name="animalFat" tool_category="Butcher" count="1"/>
 	<drop event="Harvest" name="femur" tool_category="Butcher" count="2"/>
 	<!-- <drop event="Destroy" name="animalFat" tool_category="Butcher" count="2"/> -->
+	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
+	<property name="Buffs" value="zombieRadiatedBuff80"/>
+
+	
 </entity_class>
 
 <entity_class name="animalBear" extends="animalTemplateHostile">
@@ -1812,18 +2192,58 @@
 	<property name="MaxHealth" value="80"/>
 	<property name="Immunity" value="sickness;disease;bleeding;wellness"/>
 	<property name="SoundAlert" value="Enemies/Scout_Zombie/zombiefemalescoutalert"/>>
-	<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalescoutsense"/>
 	<property name="ExperienceGain" value="898"/>
 	<property name="DeadBodyHitPoints" value="175"/>
 </entity_class>
 
 <entity_class name="animalZombieVulturerad" extends="animalZombieVulture">
-	<property name="AITask-3" value="RangedAttackTarget" param1="1" param2="5"/>
+	<property name="Mesh" value="Animals/Vulture/animalVultureStandardRagdoll"/>
+	<property name="Class" value="EntityVulture"/>
+	<property name="HandItem" value="handZombieCop"/>
+	<property name="RightHandJointName" value="Jaw"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="PhysicsBody" value="vulture"/>
 	<property name="MaxHealth" value="120"/>
-	<property name="HandItem" value="handZombieCop"
-	<property name="Immunity" value="sickness;disease;bleeding;wellness;burning "/>
-	<property name="ExperienceGain" value="898"/>
+	<property name="Immunity" value="sickness;disease;bleeding;wellness"/>
+	<property name="ExperienceGain" value="798"/>
 	<property name="DeadBodyHitPoints" value="175"/>
+	<property name="AITask-1" value="BreakDoor"/>
+	<property name="AITask-2" value="BreakBlock"/>
+	<property name="AITask-3" value="RangedAttackTarget" param1="1" param2="5"/>
+	<property name="AITask-4" value="ApproachAndAttackTarget" param1="EntityPlayer"/>
+	<property name="AITask-5" value="ApproachSpot"/>
+	<property name="AITask-6" value="Wander"/>
+	<property name="SoundRandom" value="Animals/Vulture/vultureroam"/>
+	<property name="SoundAlert" value="Animals/Vulture/vulturealert"/>
+	<property name="SoundHurt" value="Animals/Vulture/vulturepain"/>
+	<property name="SoundDeath" value="Animals/Vulture/vulturedeath"/>
+	<property name="SoundAttack" value="Animals/Vulture/vultureattack"/>
+	<property name="SoundSense" value="Animals/Vulture/vulturesense"/>
+	<property name="SoundGiveUp" value="Animals/Vulture/vulturegiveup"/>
+	<property name="Explosion.ParticleIndex" value="8"/>
+	<property name="Explosion.RadiusBlocks" value="2"/>
+	<property name="Explosion.RadiusEntities" value="3"/>
+	<property name="Explosion.BlockDamage" value="100"/>
+	<property name="Explosion.EntityDamage" value="50"/>
+	<property name="Explosion.DamageBonus.earth" value="0"/>
+	<property name="HeadDismemberBonusChance" value="0.08"/>
+	<property name="HeadDismemberThreshold" value="0"/>
+	<property name="LowerLegDismemberThreshold" value="0"/>
+	<property name="UpperLegDismemberThreshold" value="0"/>
+	<property name="LowerArmDismemberThreshold" value="0"/>
+	<property name="UpperArmDismemberThreshold" value="0"/>
+	<property name="LegCrawlerThreshold" value="0"/>
+	<property name="LegCrippleThreshold" value="0"/>
+	<property name="KnockdownProneDamageThreshold" value="0"/>
+	<property name="KnockdownKneelDamageThreshold" value="0"/>
+	<property name="LegsExplosionDamageMultiplier" value="2"/> <!-- volatile so vulnerable to land mines/explosives -->
+	<property name="ArmsExplosionDamageMultiplier" value="2"/>
+	<property name="HeadExplosionDamageMultiplier" value="2"/>
+	<property name="ChestExplosionDamageMultiplier" value="2"/>
+	<drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="3"/> <!-- animalZombieVulture -->
+	<drop event="Harvest" name="feather" tool_category="Butcher" count="40"/><drop event="Harvest" name="rottingFlesh" tool_category="Butcher" count="0"/>
 	<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 	<property name="Buffs" value="zombieRadiatedBuff40"/>
 </entity_class>
@@ -1865,7 +2285,7 @@
 	<property name="SoundHurt" value="Animals/Snake/snakepain"/>
 	<property name="SoundDeath" value="Animals/Snake/snakedeath"/>
 	<property name="SoundRandom" value="Animals/Snake/snakeroam"/>
-	<property name="SoundSense" value="Animals/Snake/snakesense"/>
+	<property name="Sound" value="Animals/Snake/snakesense"/>
 	<property name="SoundAlert" value="Animals/Snake/snakealert"/>
 	<property name="SoundAttack" value="Animals/Snake/snakeattack"/>
 	<property name="AttackTimeoutDay" value="1.1"/>
@@ -1906,7 +2326,7 @@
 </entity_class>
 
 
-<entity_class name="killerRabbit" extends="animalTemplateHostile">
+<entity_class name="animalkillerRabbit" extends="animalTemplateHostile">
 	<property name="Mesh" value="Animals/Rabbit/RABBIT"/>
 	<property name="Prefab" value="NPC"/>
 	<property name="Class" value="EntityAnimalRabbit"/>
@@ -2012,14 +2432,16 @@
 	<property name="AITask-2" value="BreakDoor"/>
 	<property name="AITask-3" value="BreakBlock"/>
 	<property name="AITask-4" value="Territorial"/>
-	<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityAnimalStag" param2="30"/>
-	<property name="AITask-6" value="ApproachAndAttackTarget" param1="EntityPlayer" param2="30"/>
+	<property name="AITask-5" value="ApproachAndAttackTarget" param1="EntityPlayer" param2="20"/>
+	<property name="AITask-6" value="ApproachAndAttackTarget" param1="EntityNPC" param2="20"/>
 	<property name="AITask-8" value="ApproachSpot"/>
 	<property name="AITask-9" value="Wander"/>
-	<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-	<property name="AITarget-2" value="BlockingTargetTask"/>
-	<property name="AITarget-3" value="SetNearestEntityAsTarget" param1="EntityPlayer" param2="30"/>
-	<property name="AITarget-4" value="SetNearestEntityAsTarget" param1="EntityAnimalStag"/>
+		<property name="AITarget-1" value="SetAsTargetIfHurt" param1="EntityNPC"/>
+	<property name="AITarget-2" value="SetAsTargetIfHurt" param1="EntityPlayer"/>
+	<property name="AITarget-3" value="BlockingTargetTask"/>
+	<property name="AITarget-4" value="SetNearestCorpseAsTarget" param1="EntityPlayer"/>
+	<property name="AITarget-5" value="SetNearestEntityAsTarget" param1="EntityNPC"/>
+	<property name="AITarget-6" value="SetNearestEntityAsTarget" param1="EntityPlayer"/>
 			<property name="ParticleOnSpawn" value="ParticleEffects/RadiatedParticlesOnMesh" param1="SetShapeToMesh0"/>
 		<property name="Buffs" value="zombieRadiatedBuff40"/>
 	<drop event="Harvest" name="rawMeat" tool_category="Butcher" count="5"/> <!-- animalBoar -->
