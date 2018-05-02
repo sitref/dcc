@@ -512,12 +512,10 @@ actions="debuff(burningSmall);attach(ParticleEffects/p_onFire, @impact);damage(0
 
 <buff id="asphaltStaBoostTrigger" duration="1" actions="setvar(CTRroadrun, 10)" />
 
-<buff id="asphaltStaminaEffect" duration="0" buffif="CTRroadrun greater 0" debuffif="CTRroadrun less 1" actions="increment(CTRroadrun, -1, 1, 0, 0)"
-	icon="ui_game_symbol_run" name_key="Road Runner" description_key="Meep meep!" tooltip_key="Meep meep!">
+<buff id="asphaltStaminaEffect" duration="0" buffif="CTRroadrun greater 0" debuffif="CTRroadrun less 1" actions="increment(CTRroadrun, -1, 1, 0, 0)" icon="ui_game_symbol_run" name_key="Road Runner" description_key="Meep meep!" tooltip_key="Meep meep!">
 	<modify id="0" stat="stamina" amount="1" rate="1"/>
 	<modify id="0" stat="speedmodifier" mulValue="1.1"/>
-				</buff>
-
+</buff>
 
 <buff id="critGunMP5" duration="1" castsound="Buffs/critical_blunt" >
 	<modify id="1" stat="health" amount="-100" rate="1"/>

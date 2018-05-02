@@ -1032,6 +1032,7 @@
 	<item name="candleStick"/>
 	<item name="glassCTRSheet"/>
 	<item name="gunPowder" count="1,3"/>
+	<item name="guncotton" count="1"/>
 	<item name="doorKnob" count="1"/>
 	<item name="oil" count="2,6"/>
 	<item name="shortMetalPipe" count="1"/>
@@ -1053,6 +1054,7 @@
 	<item name="scrapPlastics" count="1,2" prob="0.3"/>
 	<item name="beaker" prob="0.3"/>
 	<item name="beer" prob="0.5"/>
+	<item name="Schmidtbier" prob="0.3"/>
 	<item name="vodka" prob="0.01"/>
 	<item name="fruitSpirit" prob="0.01"/>
 	<item name="fruitBrand" prob="0.01"/>
@@ -1283,6 +1285,7 @@
 	<item name="flashlight02"/>
 	<item name="huntingKnife"/>
 	<item name="gunPowder" count="20,50"/>
+	<item name="guncotton" count="10,25"/>
 	<item name="bulletCasing" count="20,50"/>
 	<item name="bulletTip" count="20,50"/>
 	<item name="steelArrowHead"/>
@@ -1311,6 +1314,7 @@
 	<item name="emptyJar" prob="1.5"/>
 	<item name="bottledWater"/>
 	<item name="beer" prob="3.5"/>
+	<item name="Schmidtbier" prob="0.3"/>
 	<item name="megaCrush" prob="0.045"/>
 	<item name="vodka" prob="0.1"/>
 	<item name="fruitSpirit" prob="0.1"/>
@@ -1358,6 +1362,7 @@
 	<item group="tools"/>
 	<item name="miningHelmet" prob="0.7"/>
 	<item name="dynamite" count="2,6" prob="0.2"/>
+	<item name="upgradeddynamite" count="1,3" prob="1"/>
 	<item group="rareOres" prob="0.1"/>
 	<item name="ironFragment" count="30,150" prob="0.2"/>
 	<item name="torch" prob="0.1"/>
@@ -1385,6 +1390,9 @@
 	<item name="wornBoots"/>
 	<item name="shades"/>
 	<item name="miningHelmet"/>
+	<item name="dynamite" count="1,3" prob="0.2"/>
+	<item name="upgradeddynamite" count="1,3" prob="0.2"/>
+	<item name="tnt" count="1,3" prob="0.1"/>
 	<item name="flashlight02" prob="0.3"/>
 	<item name="nail" count="10,40" prob="0.3"/>
 	<item name="forgedIron" count="5,15" prob="0.25"/>
@@ -1429,6 +1437,7 @@
 	<item name="animalFat" count="4,10"/>
 	<item name="coal" count="10,20" prob="2"/>
 	<item name="potassiumNitratePowder" count="10,20" prob="2"/>
+	<item name="sulfur" count="10,20" prob="1"/>
 	<item name="glue" count="1,5"/>
 	<item name="oilShale" count="10,30"/>
 	<item name="painkillers" count="2,5"/>
@@ -1437,6 +1446,8 @@
 	<item name="firstAidKitSchematic" prob="0.15"/>
 	<item name="beaker" prob="0.5"/>
 	<item name="sulfuricAcid" prob="0.5"/>
+	<item name="nitricAcid" prob="0.5"/>
+	<item name="toulol" prob="0.5"/>
 </lootgroup>
 
 
@@ -1703,9 +1714,10 @@
 </lootcontainer>
 
 <!-- lockers -->
-<lootcontainer id="43" count="0,2" size="4,3" sound_open="UseActions/open_locker" sound_close="UseActions/close_locker" loot_quality_template="baseTemplate">
+<lootcontainer id="43" count="0,3" size="4,3" sound_open="UseActions/open_locker" sound_close="UseActions/close_locker" loot_quality_template="baseTemplate">
 	<item group="clothes" prob="28"/>
 	<item group="hats" prob="10"/>
+	<item group="books" count="1"/>
 	<item group="ammo" prob="0.02"/>
 	<item group="weaponsLongShotgun+ammo" prob="0.02"/>
 	<item group="books" count="1,2"/>
@@ -1714,6 +1726,7 @@
 	<item group="medicine" prob="0.05"/>
 	<item group="trophyGroup"/>
 	<item name="gunPowder" count="1,5"/>
+	<item name="guncotton" count="1,3"/>
 	<item name="padlock" prob="0.8"/>
 	<item group="beverages"/>
 </lootcontainer>
@@ -2011,6 +2024,7 @@
 	<item group="weaponsHuntingRifleParts" prob="1.2"/>
 	<item group="weaponsHuntingRifle+ammo" prob="3"/>
 	<item name="dynamite" count="1,3" prob="1"/>
+	<item name="upgradeddynamite" count="1,3" prob="1"/>
 	<item group="cowboyHatAll" prob="1"/>
 	<item group="bandanaAll" prob="1"/>
 	<item name="animalHidePoncho" prob="1"/>
@@ -2041,6 +2055,7 @@
 	<item name="shades" prob="0.1"/>
 	<item name="shadesBlack" prob="0.5"/>
 	<item name="beer" prob="2"/>
+	<item name="Schmidtbier" prob="0.3"/>
 	<item name="grainAlcohol"/>
 	<item name="vodka" />
 	<item name="oldCash" count="1,15"/>
@@ -2091,6 +2106,9 @@
 	<item name="shovelIron" prob="1"/>
 	<item name="shovelSteel" prob="0.5"/>
 	<item name="beer" prob="5"/>
+	<item name="Schmidtbier" prob="1"/>
+	<item name="dynamite" count="1,3" prob="1"/>
+	<item name="upgradeddynamite" count="1,3" prob="1"/>
 	<item name="vodka" prob="0.1"/>
 	<item group="weaponsCompoundBowParts" prob="0.02"/>
 	<item name="compoundBow" prob="0.04"/>
@@ -2240,6 +2258,7 @@
 	<item name="wood" count="10,40" prob="2"/>
 	<item name="paint" count="15,40"/>
 	<item name="gunPowder" count="20,50"/>
+	<item name="guncotton" count="10,25"/>
 	<item name="chrysanthemumPlant" count="5,12"/>
 	<item name="cottonPlant" count="5,12"/>
 	<item name="goldenrodPlant" count="5,12"/>

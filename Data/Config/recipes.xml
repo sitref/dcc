@@ -549,7 +549,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 </recipe>
 
 <recipe name="clubBarbed" count="1" craft_area="workbench">
-	<ingredient name="forgedIron" count="16"/>
+	<ingredient name="barbedWireSheet" count="5"/>
 	<ingredient name="wood" count="10"/>
 </recipe>
 
@@ -952,6 +952,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 <recipe name="dynamite" count="1">
 	<ingredient name="yuccaFibers" count="1"/>
 	<ingredient name="gunPowder" count="16"/>
+	<ingredient name="paper" count="8"/>
+</recipe>
+
+<recipe name="upgradeddynamite" count="1">
+	<ingredient name="yuccaFibers" count="1"/>
+	<ingredient name="guncotton" count="16"/>
 	<ingredient name="paper" count="8"/>
 </recipe>
 
@@ -1432,13 +1438,55 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="bottledWater" count="1" />
 </recipe>
 
+<recipe name="nitricAcid" count="1" craft_area="chemistryStation">
+	<ingredient name="potassiumNitratePowder" count="1" />
+	<ingredient name="emptyJar" count="1" />
+</recipe>
+
+<recipe name="toulol" count="1" craft_area="chemistryStation">
+	<ingredient name="coal" count="1" />
+	<ingredient name="emptyJar" count="1" />
+</recipe>
+
+<recipe name="sulfuricAcid" count="1" craft_area="chemistryStation">
+	<ingredient name="ironFragment" count="10" />
+	<ingredient name="bottledWater" count="1" />
+</recipe>
+
+<recipe name="sulfuricAcid" count="1" craft_area="chemistryStation">
+	<ingredient name="sulfur" count="2" />
+	<ingredient name="bottledWater" count="1" />
+</recipe>
+
+<recipe name="sulfur" count="1" craft_area="chemistryStation">
+	<ingredient name="oilShale" count="5" />
+</recipe>
+
+<recipe name="sulfur" count="1" craft_area="forge" material_based="true">
+	<ingredient name="oilShale" count="5" />
+</recipe>
+
+<recipe name="guncotton" count="1" craft_area="chemistryStation">
+	<ingredient name="paper" count="1"/>
+	<ingredient name="sulfuricAcid" count="1" />
+	<ingredient name="nitricAcid" count="1"/>
+</recipe>
+
+<recipe name="guncotton" count="1" craft_area="chemistryStation">
+	<ingredient name="cottonPlant" count="1"/>
+	<ingredient name="sulfuricAcid" count="1" />
+	<ingredient name="nitricAcid" count="1"/>
+</recipe>
+
 <recipe name="gunPowder" count="1" craft_area="chemistryStation">
 	<ingredient name="coal" count="1"/>
+	<ingredient name="sulfur" count="1" />
 	<ingredient name="potassiumNitratePowder" count="1"/>
 </recipe>
 
 <recipe name="gunPowder" count="1">
 	<ingredient name="coal" count="2"/>
+	<ingredient name="sulfur" count="2" />
 	<ingredient name="potassiumNitratePowder" count="2"/>
 </recipe>
 
@@ -2008,6 +2056,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="shortMetalPipe" count="1"/>
 </recipe>
 
+<recipe name="upgradedpipeBomb" count="1" craft_area="workbench">
+	<ingredient name="yuccaFibers" count="1"/>
+	<ingredient name="guncotton" count="10"/>
+	<ingredient name="shortMetalPipe" count="1"/>
+</recipe>
+
 <recipe name="HolypipebombOfAntioch" count="1" craft_area="workbench">
 	<ingredient name="goldNugget" count="30"/>
 	<ingredient name="gunPowder" count="100"/>
@@ -2391,10 +2445,11 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 </recipe>
 
 <recipe name="tnt" count="1" >
-	<ingredient name="yuccaFibers" count="1"/>
-	<ingredient name="gunPowder" count="20"/>
-	<ingredient name="ductTape" count="1"/>
-	<ingredient name="paper" count="10"/>
+	<ingredient name="gunPowder" count="5"/>
+	<ingredient name="sulfuricAcid" count="1"/>
+	<ingredient name="nitricAcid" count="1"/>
+	<ingredient name="toulol" count="1"/>
+	<ingredient name="ductTape" count="2"/>
 </recipe>
 
 <recipe name="torch" count="1">

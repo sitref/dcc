@@ -1074,6 +1074,7 @@ Mesh files no longer used:
 	<property name="CustomIcon" value="gunMP5" />
 	<property name="CustomIconTint" value="FF7256" />
 	<property name="RepairTools" value="repairKit"/>
+	<property name="DescriptionKey" value="gunMP5Desc" />
 	<property name="HoldType" value="6"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="weapon_jam"/>
@@ -3129,6 +3130,39 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="craftSkillScience"/>
 </item>
 
+<item id="182" name="upgradeddynamite">
+	<property name="Class" value="ItemClassTimeBomb"/>
+	<property name="Meshfile" value="Items/Weapons/Ranged/Dynamite/dynamitePrefab"/>
+	<property name="Material" value="MDynamite"/>
+	<property name="CustomIcon" value="tnt"/>
+	<property name="HoldType" value="25"/>
+	<property name="Stacknumber" value="40"/> <!-- STK explosives -->
+	<property name="EconomicValue" value="71"/>
+	<property name="Explosion.BlockDamage" value="1500"/>
+	<property name="Explosion.EntityDamage" value="666"/>
+	<property name="Explosion.ParticleIndex" value="1"/>
+	<property name="Explosion.RadiusBlocks" value="5"/>
+	<property name="Explosion.RadiusEntities" value="9"/>
+	<!--<property name="Explosion.DamageBonus.stone" value="0"/><property name="Explosion.DamageBonus.metal" value="0"/><property name="Explosion.DamageBonus.earth" value="0"/><property name="Explosion.DamageBonus.cloth" value="5"/><property name="Explosion.DamageBonus.wood" value="0"/><property name="Explosion.DamageBonus.water" value="0"/><property name="Explosion.DamageBonus.glass" value="1"/>-->
+	<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
+	<property name="DropScale" value="2"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="ThrowAway"/>
+		<property name="Delay" value="1.2"/>
+		<property name="Throw_strength_default" value="8"/>
+		<property name="Throw_strength_max" value="30"/>
+		<property name="Max_strain_time" value="1.5"/>
+		<property name="Sound_start" value="swoosh"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Activate"/>
+		<property name="Delay" value="1"/>
+	</property>
+	<property name="ThrowableDecoy" value="true"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillScience"/>
+</item>
+
 <item id="183" name="molotovCocktail">
 	<property name="Class" value="ItemClassTimeBomb"/>
 	<property name="Material" value="organic"/>
@@ -3211,6 +3245,45 @@ Mesh files no longer used:
 		<property name="Delay" value="1"/>
 	</property>
 	<property name="ThrowableDecoy" value="false"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillScience"/>
+</item>
+
+<item id="185" name="upgradedpipeBomb">
+	<property name="Class" value="ItemClassTimeBomb"/>
+	<property name="Meshfile" value="Items/Weapons/Ranged/PipeBomb/PipeBombPrefab"/>
+	<property name="Material" value="metal"/>
+	<property name="CustomIcon" value="pipeBomb" />
+ 	<property name="HoldType" value="25"/>
+	<property name="Stacknumber" value="40"/> <!-- STK explosives -->
+	<property name="EconomicValue" value="41"/>
+	<property name="Explosion.BlockDamage" value="12"/>
+	<property name="Explosion.EntityDamage" value="120"/>
+	<property name="Explosion.ParticleIndex" value="1"/>
+	<property name="Explosion.RadiusBlocks" value="3"/>
+	<property name="Explosion.RadiusEntities" value="5"/>
+	<property name="Explosion.DamageBonus.stone" value="0.1"/>
+	<property name="Explosion.DamageBonus.metal" value="0.05"/>
+	<property name="Explosion.DamageBonus.earth" value="0"/> <!-- should work? -->
+	<property name="Explosion.DamageBonus.wood" value="0.5"/>
+	<property name="Explosion.DamageBonus.water" value="0"/>
+	<property name="Explosion.BlastPower" value="175"/> <!-- (int,200) how far ragdolls and such are flung -->
+	<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
+	<property name="DropScale" value="2"/>
+	<property class="Action0"> <!-- AttackAction -->
+		<property name="Class" value="ThrowAway"/>
+		<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+		<property name="Delay" value="1.2"/>
+		<property name="Throw_strength_default" value="8"/>
+		<property name="Throw_strength_max" value="25"/>
+		<property name="Max_strain_time" value="1.5"/>
+		<property name="Sound_start" value="swoosh"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Activate"/>
+		<property name="Delay" value="1"/>
+	</property>
+	<property name="ThrowableDecoy" value="true"/>
 	<property name="Group" value="Ammo/Weapons"/>
 	<property name="CraftingSkillGroup" value="craftSkillScience"/>
 </item>
@@ -4065,7 +4138,6 @@ Mesh files no longer used:
 		<property name="Extends" value="minibikeSeat"/>
 		<property name="CustomIcon" value="minibikeSeat"/>
 		<property name="CustomIconTint" value="20B2AA"/>
-		<property name="DescriptionKey" value="MinibikeSeatDesc"/>
 		<property name="Material" value="MmilitaryFiber"/>
 		<property class="Attributes">
 			<property name="VehiclePlayerStaminaDrainRate" value="1,0"/>
@@ -4083,7 +4155,6 @@ Mesh files no longer used:
 		<property name="Extends" value="minibikeSeat"/>
 		<property name="CustomIcon" value="minibikeSeat"/>
 		<property name="CustomIconTint" value="B4EEB4"/>
-		<property name="DescriptionKey" value="MinibikeSeatDesc"/>
 		<property name="Material" value="MmilitaryFiber"/>
 		<property class="Attributes">
 			<property name="VehiclePlayerStaminaDrainRate" value="1,0"/>
@@ -4231,7 +4302,6 @@ Mesh files no longer used:
 		<property name="Extends" value="minibikeHandlebars"/>
 		<property name="CustomIcon" value="minibikeHandlebars"/>
 		<property name="CustomIconTint" value="20B2AA"/>
-		<property name="DescriptionKey" value="MinibikeHandlebarsDesc"/>
 		<property class="Attributes">
 			<property name="VehicleSteering" value="3,3"/>
 			<property name="VehicleMaxSteeringAngle" value="10.5,10.5"/>
@@ -4251,7 +4321,6 @@ Mesh files no longer used:
 		<property name="Extends" value="minibikeHandlebars"/>
 		<property name="CustomIcon" value="minibikeHandlebars"/>
 		<property name="CustomIconTint" value="B4EEB4"/>
-		<property name="DescriptionKey" value="MinibikeHandlebarsDesc"/>
 		<property name="Material" value="Msteel"/>
 		<property class="Attributes">
 			<property name="VehicleSteering" value="3,3"/>
@@ -9833,6 +9902,21 @@ Mesh files no longer used:
 	<property name="RepairAmount" value="400"/> -->
 </item>
 
+<item id="1339" name="toulol">
+	<property name="Extends" value="bottledWater"/>
+	<property name="CustomIcon" value="grainAlcohol"/>
+	<property name="EconomicValue" value="100"/>
+	<property name="CraftingIngredientTime" value="5"/>
+	<property class="Action1">
+		<property name="Delay" value="1.5"/>
+		<property name="Gain_stamina" value="-10"/>
+		<property name="Gain_food" value="-10"/>
+		<property name="Gain_water" value="-10"/>
+		<property name="Gain_health" value="-20"/>
+	</property>
+	<property name="Group" value="Science"/>
+</item>
+
 <item id="1340" name="feather">
 	<property name="Meshfile" value="Items/Crafting/featherPrefab"/>
 	<property name="Material" value="cloth"/>
@@ -9972,6 +10056,21 @@ Mesh files no longer used:
 	<property name="CraftingSkillGroup" value="craftSkillGuns"/>
 </item>
 
+<item id="1351" name="nitricAcid">
+	<property name="Extends" value="bottledWater"/>
+	<property name="CustomIcon" value="grainAlcohol"/>
+	<property name="EconomicValue" value="100"/>
+	<property name="CraftingIngredientTime" value="5"/>
+	<property class="Action1">
+		<property name="Delay" value="1.5"/>
+		<property name="Gain_stamina" value="-20"/>
+		<property name="Gain_food" value="-30"/>
+		<property name="Gain_water" value="-30"/>
+		<property name="Gain_health" value="-50"/>
+	</property>
+	<property name="Group" value="Science"/>
+</item>
+
 <item id="1353" name="nail">
 	<property name="Meshfile" value="Items/Tools/nailProjectilePrefab"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
@@ -10021,6 +10120,32 @@ Mesh files no longer used:
 	<property name="Stacknumber" value="500"/> <!-- STK resource -->
 	<property name="EconomicValue" value="77"/>
 	<property name="Group" value="Resources,Ammo/Weapons"/>
+	<property name="CraftingSkillGroup" value="craftSkillGuns"/>
+</item>
+
+<item id="1356" name="sulfur">
+	<property name="Meshfile" value="Items/Food/cornmealPrefab"/>
+	<property name="Material" value="coal"/>
+	<property name="HoldType" value="21"/>
+	<property name="CustomIcon" value="potassiumNitratePowder" />
+	<property name="CustomIconTint" value="EEEE00" />
+	<property name="Stacknumber" value="6000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="10"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Group" value="Resources"/>
+	<property name="CraftingIngredientTime" value="2"/>
+</item>
+
+<item id="1357" name="guncotton">
+	<property name="Meshfile" value="Items/Crafting/gun_powderPrefab"/>
+	<property name="Material" value="dirt"/>
+	<property name="HoldType" value="21"/>
+	<property name="CustomIcon" value="gunPowder" />
+	<property name="CustomIconTint" value="CDCDC1" />
+	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="22"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Group" value="Resources,Ammo/Weapons,Tools/Traps"/>
 	<property name="CraftingSkillGroup" value="craftSkillGuns"/>
 </item>
 
