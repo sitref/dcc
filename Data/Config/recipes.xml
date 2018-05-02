@@ -1462,8 +1462,8 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="oilShale" count="5" />
 </recipe>
 
-<recipe name="sulfur" count="1" craft_area="forge" material_based="true">
-	<ingredient name="oilShale" count="5" />
+<recipe name="sulfur" count="1" craft_area="chemistryStation">
+	<ingredient name="ironFragment" count="4" />
 </recipe>
 
 <recipe name="guncotton" count="1" craft_area="chemistryStation">
