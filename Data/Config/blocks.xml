@@ -297,9 +297,7 @@ tbnsew:
 	<drop event="Destroy" count="0"/>
 	<drop event="Fall" name="destroyedStone" count="1" prob="0.75" stick_chance="1"/>
 	<property name="CanMobsSpawnOn" value="true"/>
-	<!-- A15
 	<property name="BuffsWhenWalkedOn" value="asphaltStaBoostTrigger"/>
-	-->
 	<property name="EconomicValue" value="45"/>
 	<property name="EconomicBundleSize" value="20"/>
 </block>
