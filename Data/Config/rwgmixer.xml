@@ -3,7 +3,7 @@
 	<world ruleset="vanilla" />
 
 	<rulesets>
-		<ruleset name="vanilla" cell_cache_size="8" cell_size="1300" cell_offset="0" generation_distance="2400" terrain_generator="vanilla" biome_generator="vanilla">
+		<ruleset name="vanilla" cell_cache_size="8" cell_size="1300" cell_offset="0" generation_distance="8000" terrain_generator="vanilla" biome_generator="vanilla">
 			<cell_rule name="default" prob="1"/>
 			<!--<cell_rule name="customHubTest" position="0,1" prob="0"/>-->
 		</ruleset>
@@ -730,7 +730,7 @@
 		</biome_spawn_rule>
 
 		<biome_spawn_rule name="radiated">
-			<distance_from_center range="2500,6000"/>
+			<distance_from_center range="8000,18000"/>
 		</biome_spawn_rule>
 
 		<biome_spawn_rule name="water">

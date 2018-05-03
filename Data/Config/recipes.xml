@@ -186,6 +186,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="feather" count="2"/>
 </recipe>
 
+<recipe name="arrow" count="2">
+	<ingredient name="rockSmall" count="3"/>
+	<ingredient name="wood" count="1"/>
+	<ingredient name="scrapPlastics" count="3"/>
+</recipe>
+
 <recipe name="asphalt" count="1" craft_area="cementMixer">
 	<ingredient name="crushedSand" count="8"/>
 	<ingredient name="rockSmall" count="17"/>
@@ -1005,6 +1011,22 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="feather" count="1"/>
 </recipe>
 
+<recipe name="explodingCrossbowBolt" count="1" craft_area="workbench">
+	<ingredient name="steelArrowHead" count="1"/>
+	<ingredient name="gunPowder" count="8"/>
+	<ingredient name="ductTape" count="1"/>
+	<ingredient name="wood" count="1"/>
+	<ingredient name="scrapPlastics" count="2"/>
+</recipe>
+
+<recipe name="explodingCrossbowBolt" count="1" craft_area="workbench">
+	<ingredient name="steelArrowHead" count="1"/>
+	<ingredient name="ductTape" count="1"/>
+	<ingredient name="animalHide" count="1"/>
+	<ingredient name="wood" count="1"/>
+	<ingredient name="scrapPlastics" count="2"/>
+</recipe>
+
 <recipe name="fertilizer" count="1" craft_area="chemistryStation">
 	<ingredient name="turd" count="1"/>
 	<ingredient name="potassiumNitratePowder" count="10"/>
@@ -1574,6 +1596,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="feather" count="1"/>
 </recipe>
 
+<recipe name="ironArrow" count="1">
+	<ingredient name="ironArrowHead" count="1"/>
+	<ingredient name="wood" count="1"/>
+	<ingredient name="scrapPlastics" count="2"/>
+</recipe>
+
 <recipe name="ironArrowHead" count="1" craft_area="forge" craft_tool="anvil" material_based="true">
 	<ingredient name="unit_iron" count="2"/>
 	<ingredient name="unit_clay" count="1"/>
@@ -1618,6 +1646,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="ironArrowHead" count="1"/>
 	<ingredient name="wood" count="1"/>
 	<ingredient name="feather" count="1"/>
+</recipe>
+
+<recipe name="ironCrossbowBolt" count="1" craft_area="workbench">
+	<ingredient name="ironArrowHead" count="1"/>
+	<ingredient name="wood" count="1"/>
+	<ingredient name="scrapPlastics" count="2"/>
 </recipe>
 
 <recipe name="ironDoor1_v1" count="1">
@@ -2407,6 +2441,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="feather" count="1"/>
 </recipe>
 
+<recipe name="steelArrow" count="1">
+	<ingredient name="steelArrowHead" count="1"/>
+	<ingredient name="wood" count="1"/>
+	<ingredient name="scrapPlastics" count="2"/>
+</recipe>
+
 <recipe name="steelArrowHead" count="1" craft_area="forge" craft_tool="forgeCrucible" material_based="true">
 	<ingredient name="unit_iron" count="5"/>
 	<ingredient name="unit_clay" count="1"/>
@@ -2416,6 +2456,12 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="steelArrowHead" count="1"/>
 	<ingredient name="wood" count="1"/>
 	<ingredient name="feather" count="1"/>
+</recipe>
+
+<recipe name="steelCrossbowBolt" count="1" craft_area="workbench">
+	<ingredient name="steelArrowHead" count="1"/>
+	<ingredient name="wood" count="1"/>
+	<ingredient name="scrapPlastics" count="2"/>
 </recipe>
 
 <recipe name="stone" count="1" craft_area="cementMixer">
