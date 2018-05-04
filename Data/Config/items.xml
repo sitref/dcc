@@ -4551,8 +4551,8 @@ Mesh files no longer used:
 <item id="364" name="animalHideBoots"> <!-- armorMasterHideArmor -->
 	<property name="Insulation" value="4"/>
 	<property name="Encumbrance" value="0.02"/>
-	<property name="Material" value="leather"/>
-	<property name="RepairTools" value="leather"/>
+	<property name="Material" value="animalHide"/>
+	<property name="RepairTools" value="animalHide"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="FuelValue" value="20"/>
 	<property name="EconomicValue" value="120"/>
@@ -5641,8 +5641,8 @@ Mesh files no longer used:
 	<property name="Meshfile" value="Items/Misc/sackPrefab"/>
 	<property name="HoldType" value="45"/>
 	<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
-	<property name="Material" value="leather"/>
-	<property name="RepairTools" value="leather"/>
+	<property name="Material" value="animalHide"/>
+	<property name="RepairTools" value="animalHide"/>
 	<property name="DegradationBreaksAfter" value="true"/>
 	<property name="FuelValue" value="75"/>
 	<property name="EconomicValue" value="480"/>
@@ -9523,7 +9523,8 @@ Mesh files no longer used:
 <item id="1312" name="animalHide">
 	<property name="Meshfile" value="Items/Crafting/animal_hidePrefab"/>
 	<property name="HoldType" value="21"/>
-	<property name="Material" value="leather"/>
+	<property name="Material" value="animalHide"/>
+	<property name="RepairAmount" value="80"/>
 	<property name="Weight" value="5"/>
 	<property name="Stacknumber" value="250"/> <!-- STK resource -->
 	<property name="FuelValue" value="5"/>
@@ -9895,6 +9896,7 @@ Mesh files no longer used:
 	<property name="Weight" value="15"/>
 	<property name="EconomicValue" value="30"/>
 	<property name="SellableToTrader" value="false"/>
+	<property name="Stacknumber" value="250"/> 
 	<property name="Group" value="Resources"/>
 	<property name="CraftingIngredientExp" value="15"/>
 	<property name="CraftingIngredientTime" value="2"/>

@@ -947,6 +947,21 @@
 
 <lootgroup name="cannedfood">
 <item name="egg" count="1,2"/>
+	<item name="canBeef" prob="0.1"/>
+	<item name="canCatfood" prob="0.1"/>
+	<item name="canChicken"prob="0.1"/>
+	<item name="canChili"prob="0.1"/>
+	<item name="canDogfood"prob="0.1"/>
+	<item name="canHam"prob="0.1"/>
+	<item name="canLamb"prob="0.1"/>
+	<item name="canMiso"prob="0.1"/>
+	<item name="canPasta"prob="0.1"/>
+	<item name="canPeas"prob="0.3"/>
+	<item name="canSalmon"prob="0.1"/>
+	<item name="canSoup"prob="0.1"/>
+	<item name="canStock"prob="0.1"/>
+	<item name="canTuna"prob="0.1"/>
+	<item name="canPears"prob="0.3"/>
 	<item name="blueberryPie"/>
 	<item name="meatStew"/>
 	<item name="rawMeat" count="1,2"/>
@@ -1463,7 +1478,7 @@
 <!-- garbage-->
 <lootcontainer id="2" count="0,2" size="5,3" sound_open="UseActions/open_garbage" sound_close="UseActions/close_garbage" loot_quality_template="baseTemplate">
 	<item group="junk"/>
-	<item group="beverages"/>
+	<item group="beverages" prob="0.4"/>
 </lootcontainer>
 
 <!-- canned or dry food cupboard door open sound-->
@@ -1501,7 +1516,7 @@
 	<item group="medicine"/>
 	<item group="weaponsPistol+ammo" prob="0.5"/>
 	<item name="flashlight02"/>
-	<item group="beverages"/>
+	<item group="beverages"prob="0.3"/>
 </lootcontainer>
 
 <!-- medicine cabinets -->
@@ -1518,7 +1533,8 @@
 	<item name="wrench" count="1"/>
 	<item name="scrapLead" count="1,10"/>
 	<item name="potassiumNitratePowder" count="2,6" prob="0.3"/>
-	<item group="beverages"/>
+	<item group="beverages" prob="0.4"/>
+	<item group="cannedfood" prob="0.2" />
 </lootcontainer>
 
 <!-- backpack, place where people stash things, -->
@@ -1637,7 +1653,7 @@
 	<item group="rareBooks"/>
 	<item group="airdropMedicine" count="1,4"/>
 	<item name="flashlight02" prob="0.2"/>
-	<item group="beverages"/>
+	<item group="beverages" prob="0.2"/>
 </lootcontainer>
 
 <!-- tree hollowed stump, place where people stash things, -->
@@ -1699,7 +1715,7 @@
 	<item group="weaponsMilitaryGuns+ammo" prob="0.35"/>
 	<item group="militaryAmmo" prob="1"/>
 	<item group="militaryArmor" prob="0.1"/>
-	<item group="beverages"/>
+	<item group="beverages" prob="0.1"/>
 </lootcontainer>
 
 <!-- player dropped backpacks, they only destroy on close when they are empty -->
@@ -1781,7 +1797,7 @@
 	<item name="paper" count="2,8" prob="0.2"/>
 	<item group="books"/>
 	<item name="paintMagazineFaux" prob="0.05"/>
-	<item group="beverages"/>
+	<item group="beverages" prob="0.1"/>
 </lootcontainer>
 
 <!-- shotgun Messiah -->
@@ -1796,7 +1812,7 @@
 <lootcontainer id="51" count="0,3" size="5,4" sound_open="UseActions/open_pill_case" sound_close="UseActions/close_pill_case" loot_quality_template="baseTemplate">
 	<item group="medicine"/>
 	<item name="scrapPlastics" count="1,2" prob="0.15"/>
-	<item group="beverages"/>
+	<item group="beverages"prob="0.2"/>
 </lootcontainer>
 
 <!-- beer cooler -->
@@ -1807,7 +1823,7 @@
 <!-- working stiffs -->
 <lootcontainer id="53" count="0,3" size="5,4" sound_open="UseActions/open_cardboard" sound_close="UseActions/close_cardboard" loot_quality_template="baseTemplate">
 	<item group="workingStiffs"/>
-	<item group="beverages"/>
+	<item group="beverages" prob="0.3"/>
 </lootcontainer>
 
 <!-- shopping cart-->

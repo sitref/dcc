@@ -40,6 +40,10 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<wildcard_forge_category />
 </recipe>
 
+<recipe name="animalHide" count="1" tooltip="ttScrapMetalBrass" >
+<wildcard_forge_category />
+</recipe> 
+
 <recipe name="paper" count="1" tooltip="ttScrapMetalBrass">
 	<wildcard_forge_category />
 </recipe>
@@ -3101,14 +3105,14 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 
 <recipe name="self-writtenBook" count="1">
 	<ingredient name="emptyBook" count="2"/>
-	<ingredient name="newsprint" count="5"/>
+	<ingredient name="newsprint" count="3"/>
 	<ingredient name="feather" count="5"/>
 </recipe>
 
 <recipe name="newsprint" count="2" craft_area="chemistryStation" >
-	<ingredient name="paint" count="100"/>
+	<ingredient name="paint" count="200"/>
 	<ingredient name="oil" count="10"/>
-	<ingredient name="scrapPlastics" count="20"/>
+	<ingredient name="scrapPlastics" count="40"/>
 	<ingredient name="emptyJar" count="2"/>
 </recipe>
 

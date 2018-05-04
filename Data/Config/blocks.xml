@@ -2289,7 +2289,7 @@ group desc for stuff like metal siding
 	<property name="Extends" value="rWoodMaster"/>
 	<property name="Shape" value="New"/>
 	<property name="Model" value="ramp_inside_corner"/>
-	<property name="Texture" value="44,379,379,379,379,379"/>
+	<property name="Texture" value="379,379,379,379,379,379"/>
 	<property class="UpgradeBlock"> <property name="ToBlock" value="rWoodMetalCNRInside"/> </property>
 	<property name="DowngradeBlock" value="woodCNRInside"/>
 </block>
@@ -3346,8 +3346,10 @@ group desc for stuff like metal siding
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="LootList" value="2"/>
-	<drop event="Destroy" count="0"/>
-	<drop event="Destroy" name="scrapPlastics" count="0,2" prob="0.2" tool_category="Disassemble"/>
+	<drop event="Destroy" name="scrapPlastics" count="1"/>
+	<drop event="Destroy" name="scrapPlastics" count="1,3" tool_category="Disassemble"/>
+	<drop event="Destroy" name="paper" count="1"/>
+	<drop event="Destroy" name="paper" count="1,3" tool_category="Disassemble"/>
 </block>
 
 <block id="341" name="cntTrashPile02">
@@ -8146,7 +8148,6 @@ kind of free
 	<property name="Mesh" value="water"/>
 	<property name="Model" value="water_full"/>
 	<property name="Texture" value="223"/>
-	<property name="Map.Color" value="20,20,120"/>
 	<property name="Map.Color" value="119,136,204"/>
 </block>
 
@@ -10764,7 +10765,6 @@ kind of free
 <block id="1202" name="window03Broke3">
 	<property name="Extends" value="window03Broke2"/>
 	<property name="Model" value="Buildings/window03_broke3" param1="main_mesh"/>
-	<drop event="Destroy" count="0"/>
 </block>
 
 <block id="1203" name="window03Broke4">
@@ -13392,7 +13392,6 @@ kind of free
 	<property name="Model" value="water_full"/>
 	<property name="Texture" value="223"/>
 	<property name="Count" value="8"/>
-	<property name="Map.Color" value="20,20,120"/>
 	<property name="Map.Color" value="119,136,204"/>
 	<property name="Collide" value="melee,bullet,arrow,rocket"/>
 </block>
@@ -15436,6 +15435,7 @@ kind of free
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
 	<property name="EconomicValue" value="50"/>
+	<property name="Stacknumber" value="250"/>
 </block>
 	<!-- 1 Free -->
 
@@ -15522,6 +15522,7 @@ kind of free
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
 	<property name="EconomicValue" value="28"/>
+	<property name="Stacknumber" value="250"/>
 </block>
 
 <block id="2007" name="pressureplate">
@@ -15548,6 +15549,7 @@ kind of free
 	<property name="TakeDelay" value="5"/>
 	<property name="EconomicValue" value="124"/>
 	<property name="PickupJournalEntry" value="triggerDelayDurationTip,passthroughTriggeringTip"/>
+	<property name="Stacknumber" value="250"/>
 </block>
 
 <block id="2008" name="speaker">
@@ -15571,6 +15573,7 @@ kind of free
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
 	<property name="EconomicValue" value="72"/>
+	<property name="Stacknumber" value="250"/>
 </block>
 
 <block id="2009" name="electrictimerrelay">
@@ -15597,6 +15600,7 @@ kind of free
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
 	<property name="EconomicValue" value="119"/>
+	<property name="Stacknumber" value="250"/>
 </block>
 
 <block id="2010" name="bladeTrap">
@@ -15732,6 +15736,7 @@ kind of free
 	<drop event="Fall" name="scrapMetalPile" count="1" prob="0.75" stick_chance="1"/>
 	<property name="TakeDelay" value="5"/>
 	<property name="EconomicValue" value="524"/>
+	<property name="Stacknumber" value="250"/>
 	<property name="DescriptionKey" value="pressureplateDesc"/>
 	<property name="PickupJournalEntry" value="triggerDelayDurationTip,passthroughTriggeringTip"/>
 </block>
@@ -15763,6 +15768,7 @@ kind of free
 	<property name="EconomicValue" value="310"/>
 	<property name="Group" value="Science"/>
 	<property name="TakeDelay" value="10"/>
+	<property name="Stacknumber" value="10"/>
 	<property name="PickupJournalEntry" value="cameraTip"/>
 </block>
 

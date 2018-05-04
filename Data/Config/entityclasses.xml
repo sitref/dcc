@@ -190,10 +190,10 @@
 	<property name="HeadDismemberThreshold" value="0.23"/> <!-- if the total damage exceeds that value, there is a chance for dismemberment -->
 	<property name="LowerLegDismemberThreshold" value="0.175"/>
 	<property name="LowerLegDismemberBaseChance" value="0"/>
-	<property name="LowerLegDismemberBonusChance" value="0.9"/>
+	<property name="LowerLegDismemberBonusChance" value="0.09"/>
 	<property name="UpperLegDismemberThreshold" value="0.175"/>
 	<property name="UpperLegDismemberBaseChance" value="0"/>
-	<property name="UpperLegDismemberBonusChance" value="0.9"/>
+	<property name="UpperLegDismemberBonusChance" value="0.09"/>
 	<property name="LowerArmDismemberThreshold" value="0.105"/>
 	<property name="LowerArmDismemberBaseChance" value="0"/>
 	<property name="LowerArmDismemberBonusChance" value="0.9"/>
