@@ -2098,7 +2098,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 
 <recipe name="HolypipebombOfAntioch" count="1" craft_area="workbench">
 	<ingredient name="goldNugget" count="30"/>
-	<ingredient name="gunPowder" count="100"/>
+	<ingredient name="guncotton" count="100"/>
 	<ingredient name="silverNugget" count="50"/>
 	<ingredient name="rawDiamond" count="10" />
 </recipe>
@@ -3112,9 +3112,8 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="emptyJar" count="2"/>
 </recipe>
 
-<recipe name="newsprint" count="1">
+<recipe name="newsprint" count="1" craft_area="campfire" craft_tool="beaker" >
 	<ingredient name="printedPaper" count="30"/>
-	<ingredient name="wood" count="1"/>
 	<ingredient name="bottledRiverWater" count="1"/>
 	<ingredient name="oil" count="3" />
 </recipe>

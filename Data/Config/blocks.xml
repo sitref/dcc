@@ -5239,7 +5239,7 @@ kind of free
 
 <block id="542" name="cntBirdnest">
 	<property name="Class" value="Loot"/>
-	<property name="Material" value="wood_weak"/>
+	<property name="Material" value="wood_nest"/>
 	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
 	<property name="Shape" value="Ext3dModel"/>	<property name="Texture" value="293"/>
 	<property name="Mesh" value="models"/>
@@ -13460,6 +13460,7 @@ kind of free
 	<property name="Model" value="LootContainers/garbage_decor1" param1="main_mesh"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<drop event="Destroy" name="paper" count="1" prob="1"/>
+	<drop event="Destroy" name="scrapPlastics" count="1" prob="1"/>
 </block>
 
 <block id="1483" name="garbage_decor2">
@@ -13469,6 +13470,7 @@ kind of free
 	<property name="Model" value="LootContainers/garbage_decor2" param1="main_mesh"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<drop event="Destroy" name="paper" count="1" prob="1"/>
+	<drop event="Destroy" name="scrapPlastics" count="1" prob="1"/>
 </block>
 
 <block id="1484" name="garbage_decor3">
@@ -13478,6 +13480,7 @@ kind of free
 	<property name="Model" value="LootContainers/garbage_decor3" param1="main_mesh"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<drop event="Destroy" name="brokenGlass" count="1" prob="1"/>
+	<drop event="Destroy" name="scrapPlastics" count="1" prob="1"/>
 </block>
 	<!-- 15 Free -->
 

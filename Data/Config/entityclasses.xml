@@ -48,8 +48,8 @@
 	<property name="MapIcon" value="ui_game_symbol_map_player_arrow"/>
 	<property name="IsEnemyEntity" value="false"/>
 	<property name="DropInventoryBlock" value="cntBackpackDropped"/>
-	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="bottledWater,cornBread,firstAidBandage,torch,beer,Heulballen"/>
-	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="bottledWater,cornBread,firstAidBandage,torch,beer,Heulballen"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="bottledWater,cornBread,firstAidBandage,torch,Schmidtbier"/>
+	<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="bottledWater,cornBread,firstAidBandage,torch,Schmidtbier"/>
 	<property name="ExperienceGain" value="173"/>
 	<property name="LegsExplosionDamageMultiplier" value="1"/>
 	<property name="ArmsExplosionDamageMultiplier" value="1"/>
@@ -143,8 +143,8 @@
 	<property name="IsEnemyEntity" value="true"/>
 
 	<!-- Stealth settings -->
-	<property name="SightRange" value="80"/> <!-- distance in m -->
-	<property name="SightScale" value="-10,130"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
+	<property name="SightRange" value="70"/> <!-- distance in m -->
+	<property name="SightScale" value="-10,110"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
 
 	<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
 	<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
@@ -158,8 +158,8 @@
 	<property name="SoundSleeperSenseChance" value=".5"/> <!-- the chance to play "SoundSleeperSense" when "SleeperSmellSenseThreshold" is triggered -->
 	<property name="SleeperSmellWakeThreshold" value="40,100"/>
 
-	<property name="NoiseAlertThreshold" value="15"/> <!-- for awake zombies -->
-	<property name="SmellAlertThreshold" value="15"/> <!-- for awake zombies -->
+	<property name="NoiseAlertThreshold" value="18"/> <!-- for awake zombies -->
+	<property name="SmellAlertThreshold" value="18"/> <!-- for awake zombies -->
 
 	<property name="SurfaceCategory" value="organic"/> <!-- determines the particle effect played on hit -->
 	<property name="WalkType" value="7"/>
@@ -1680,7 +1680,7 @@
 	<property name="PanicSpeed" value="1.6"/>
 
 	<!-- Stealth settings -->
-	<property name="SightRange" value="2"/> <!-- distance in m -->
+	<property name="SightRange" value="20"/> <!-- distance in m -->
 	<property name="SightScale" value="0,120"/>
 	<property name="NoiseAlertThreshold" value="250"/> <!-- for awake zombies -->
 	<property name="SmellAlertThreshold" value="250"/> <!-- for awake zombies -->
@@ -1824,7 +1824,7 @@
 	<property name="IsEnemyEntity" value="true"/>
 
 	<!-- Stealth settings -->
-	<property name="SightRange" value="5"/> <!-- distance in m -->
+	<property name="SightRange" value="20"/> <!-- distance in m -->
 	<property name="SightScale" value="-2,150"/>
 	<property name="NoiseAlertThreshold" value="20"/> <!-- for awake zombies -->
 	<property name="SmellAlertThreshold" value="20"/> <!-- for awake zombies -->

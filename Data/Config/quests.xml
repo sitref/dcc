@@ -110,7 +110,62 @@
 
 		<reward type="SkillPoints" value="10" />
 		<reward type="ShowTip" value="skillPointTip" stage="aftercomplete" />
-		<reward type="Quest" id="quest_whiteRiverCitizen1" stage="aftercomplete" />
+		<reward type="Quest" id="quest_BasicSurvival9" />
+    </quest>
+	
+	
+		<quest id="quest_BasicSurvival9" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival9" subtitle_key="quest_BasicSurvival9_subtitle" description_key="quest_BasicSurvival9_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="easy">
+		<objective type="FetchKeep" id="rockSmall" value="50" />
+		<objective type="FetchKeep" id="clayLump" value="50" />
+		<objective type="FetchKeep" id="shortMetalPipe" value="1" />
+		<objective type="FetchKeep" id="leather" value="10" />
+		<objective type="FetchKeep" id="wood" value="10" />
+		<objective type="Craft" id="bellows" value="1" />
+		<objective type="Craft" id="forge" value="1" />
+		<objective type="BlockPlace" id="forge" value="1" />
+
+		<reward type="SkillPoints" value="6" />
+		<reward type="Quest" id="quest_BasicSurvival10" />
+    </quest>
+
+	<quest id="quest_BasicSurvival10" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival10" subtitle_key="quest_BasicSurviva10_subtitle" description_key="quest_BasicSurvival10_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="easy">
+		<objective type="FetchKeep" id="wrench" value="1" />
+		<objective type="FetchKeep" id="clawHammer" value="1" />
+		<objective type="FetchKeep" id="mechanicalParts" value="5" />
+		<objective type="FetchKeep" id="forgedIron" value="10" />
+		<objective type="FetchKeep" id="wood" value="100" />
+		<objective type="Craft" id="workbench" value="1" />
+		<objective type="BlockPlace" id="workbench" value="1" />
+
+		<reward type="SkillPoints" value="6" />
+		<reward type="Quest" id="quest_BasicSurvival11" />
+		<reward type="Quest" id="write" />
+    </quest>
+
+	<quest id="quest_BasicSurvival11" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival11" subtitle_key="quest_BasicSurviva11_subtitle" description_key="quest_BasicSurvival11_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="easy">
+		<objective type="FetchKeep" id="beaker" value="2" />
+		<objective type="FetchKeep" id="burningBarrelPlayer" value="1" />
+		<objective type="FetchKeep" id="cookingPot" value="3" />
+		<objective type="FetchKeep" id="shortMetalPipe" value="15" />
+		<objective type="FetchKeep" id="wood" value="40" />
+		<objective type="Craft" id="chemistryStation" value="1" />
+		<objective type="BlockPlace" id="chemistryStation" value="1" />
+
+		<reward type="SkillPoints" value="6" />
+    </quest>
+	
+	<quest id="write" group_name_key="quest_BasicSurvival" name_key="write" subtitle_key="quest_write_subtitle" description_key="quest_write_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="easy">
+		<objective type="FetchKeep" id="printedPaper" value="150" />
+		<objective type="FetchKeep" id="beaker" value="1" />
+		<objective type="FetchKeep" id="oil" value="15" />
+		<objective type="FetchKeep" id="bottledRiverWater" value="5" />
+		<objective type="Craft" id="newsprint" value="5" />
+		<objective type="FetchKeep" id="paper" value="128" />
+		<objective type="Craft" id="emptyBook" value="2" />
+		<objective type="FetchKeep" id="feather" value="5" />
+		<objective type="Craft" id="self-writtenBook" value="1" />
+		
+		<reward type="SkillPoints" value="2" />
     </quest>
 	
 	<!-- White River Citizen 1 - Journey to Settlement -->
