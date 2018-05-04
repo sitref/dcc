@@ -949,19 +949,19 @@
 <item name="egg" count="1,2"/>
 	<item name="canBeef" prob="0.1"/>
 	<item name="canCatfood" prob="0.1"/>
-	<item name="canChicken"prob="0.1"/>
-	<item name="canChili"prob="0.1"/>
-	<item name="canDogfood"prob="0.1"/>
-	<item name="canHam"prob="0.1"/>
-	<item name="canLamb"prob="0.1"/>
-	<item name="canMiso"prob="0.1"/>
-	<item name="canPasta"prob="0.1"/>
-	<item name="canPeas"prob="0.3"/>
-	<item name="canSalmon"prob="0.1"/>
-	<item name="canSoup"prob="0.1"/>
-	<item name="canStock"prob="0.1"/>
-	<item name="canTuna"prob="0.1"/>
-	<item name="canPears"prob="0.3"/>
+	<item name="canChicken" prob="0.1"/>
+	<item name="canChili" prob="0.1"/>
+	<item name="canDogfood" prob="0.1"/>
+	<item name="canHam" prob="0.1"/>
+	<item name="canLamb" prob="0.1"/>
+	<item name="canMiso" prob="0.1"/>
+	<item name="canPasta" prob="0.1"/>
+	<item name="canPeas" prob="0.3"/>
+	<item name="canSalmon" prob="0.1"/>
+	<item name="canSoup" prob="0.1"/>
+	<item name="canStock" prob="0.1"/>
+	<item name="canTuna" prob="0.1"/>
+	<item name="canPears" prob="0.3"/>
 	<item name="blueberryPie"/>
 	<item name="meatStew"/>
 	<item name="rawMeat" count="1,2"/>
@@ -1516,7 +1516,7 @@
 	<item group="medicine"/>
 	<item group="weaponsPistol+ammo" prob="0.5"/>
 	<item name="flashlight02"/>
-	<item group="beverages"prob="0.3"/>
+	<item group="beverages" prob="0.3"/>
 </lootcontainer>
 
 <!-- medicine cabinets -->
@@ -1812,7 +1812,7 @@
 <lootcontainer id="51" count="0,3" size="5,4" sound_open="UseActions/open_pill_case" sound_close="UseActions/close_pill_case" loot_quality_template="baseTemplate">
 	<item group="medicine"/>
 	<item name="scrapPlastics" count="1,2" prob="0.15"/>
-	<item group="beverages"prob="0.2"/>
+	<item group="beverages" prob="0.2"/>
 </lootcontainer>
 
 <!-- beer cooler -->
