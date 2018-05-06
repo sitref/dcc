@@ -1,6 +1,41 @@
 <windows>
 	<window name="HUDLeftStatBars">
-		<grid name="hud" pos="9,98" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="left" >
+	    <!-- UI von Valcry für die Alpha 16.2  (getestet in der Experimentellen Version). http://youtube.com/ValcryTV -->
+		<!-- Dieser Abschnitt ist neu und für Temperatur bzw. Höhenangabe zuständig-->
+		<grid name="TempAndElevation" pos="9,162" rows="1" cols="2" width="168" cell_width="84" cell_height="30" repeat_content="false" side="left" >
+	        <rect width="84" height="30" controller="PlayerStatsWindow" stat_type="Stamina" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,100" height="30" type="sliced"/>
+				<sprite depth="2" pos="3,-3"  name="background" height="24" width="80" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" type="filled" height="24" width="78" color="128,128,0,100" fill="100" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_temperature" size="18,18" pos="4,-6" foregroundlayer="true"/>
+				<label depth="6"  name="lbltemp" pos="6,-7" color="[white]" justify="center"  pivot="topleft" font_size="16" text="{playercoretemp}" />
+			</rect>
+			<rect width="84" height="30" controller="MapStats">
+				<sprite depth="1" name="border" color="0,0,0,100" height="30" type="sliced"/>
+				<sprite depth="2" pos="3,-3"  name="background" height="24" width="80" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" type="filled" height="24" width="78" color="117,174,255,100" fill="100" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_climb" size="18,18" pos="4,-6" foregroundlayer="true"/>
+				<label depth="6"  name="TextContent" pos="6,-7" color="[white]" justify="center"  pivot="topleft" font_size="16" text="{mapelevation} M" />
+			</rect>
+		</grid>
+		<!--Hier findet Ihr die Anzeige für Essen und Trinken nebeneinander. -->
+		<grid name="foodwater" pos="9,132" rows="1" cols="2" width="168" height="30" cell_width="84" cell_height="30" repeat_content="false" side="left">
+			<rect width="84" height="30" controller="HUDStatBar" stat_type="Water" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,100" height="30" type="sliced"/>
+				<sprite depth="2" pos="3,-3"  name="background" height="24" width="80" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" type="filled" height="24" width="78" color="0,153,255,100" fill="{statfill}" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="18,18" pos="4,-6" foregroundlayer="true"/>
+				<label depth="6" name="TextContent" pos="6,-7" font_size="16" color="[white]" justify="center" pivot="topleft" text="{statcurrentwithmax}" height="20"/>
+			</rect>
+			<rect width="84" height="30" controller="HUDStatBar" stat_type="Food" visible="{statvisible}">
+				<sprite depth="1" name="border" color="0,0,0,100" height="30" type="sliced"/>
+				<sprite depth="2" pos="3,-3"  name="background" height="24" width="80" color="64,64,64,100" type="sliced" />
+				<sprite depth="3" pos="3,-3"  name="BarContent" type="filled" height="24" width="78" color="0,192,0,100" fill="{statfill}" />
+				<sprite depth="4" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="18,18" pos="4,-6" foregroundlayer="true"/>
+				<label depth="6" name="TextContent" pos="6,-7" font_size="16" color="[white]" justify="center" pivot="topleft" text="{statcurrentwithmax}" height="20"/>
+			</rect>
+		</grid>																				   
+		<grid name="hud" pos="9,102" rows="2" cols="1" width="168" cell_width="168" cell_height="46" repeat_content="false" side="left" >
 			<rect width="168" height="43" controller="HUDStatBar" stat_type="Stamina" visible="{statvisible}">
 				<sprite depth="1" name="border" color="0,0,0,100" height="43" type="sliced"/>
 				<sprite depth="2" pos="3,-3"  name="background" height="37" width="162" color="64,64,64,100" type="sliced" />
@@ -18,7 +53,7 @@
 			</rect>
 		</grid>
 
-		<rect name="hud" pos="93,124" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
+		<rect name="hud" pos="93,192" side="left" controller="BuffPopoutList" pivot="BottomLeft" >
 			<panel width="168" height="43" name="item" visible="false" pivot="right" disableautobackground="true" pos="70, 0" >
 				<sprite depth="3" pos="0,0"  name="Background" sprite="ui_game_popup" height="43" width="162" pivot="center" flip="Horizontally" color="[transparent]" />
 				<sprite depth="4" name="Icon" size="36,32" pos="-58,0" pivot="center" color="[transparent]"/>
@@ -623,7 +658,12 @@
 	<!--#$-IGS BEGIN: Adding cursor area. -$#-->
 	<window name="windowToolbelt" width="603" height="78" depth="5" anchor="CenterBottom" pos="-313, 87" backgroundcolor="[black]" controller="ToolbeltWindow" visible="{toolbeltvisible}" cursor_area="true">
 	<!--#$-IGS END.-$#-->
-
+		<rect controller="PlayerStatsWindow" width="100" height="14" visible="{statvisible}}" stat_type="Stamina">
+			<label width="200" pos="5,14" depth="1" text="{playerleveltitle}: [DECEA3]{playerlevel}[-]" font_size="14"/>
+			<sprite width="540" pos="60, 9" height="6" depth="2" type="sliced" color="[black]"/>
+			<sprite width="540" pos="60, 9" height="6" depth="2" type="sliced" color="[mediumGrey]"/>
+			<sprite width="540" pos="60, 9" height="6" depth="2" type="filled" color="128,128,128,255" fill="{playerlevelfill}"/>
+		</rect>	
 		<rect>
 			<sprite depth="8" name="backgroundMain" sprite="menu_empty3px" color="[black]" type="sliced" fillcenter="false" on_press="true" />
 			<grid depth="1" name="inventory" rows="1" cols="8" pos="3,-3" cell_width="75" cell_height="75" controller="Toolbelt" repeat_content="true">
