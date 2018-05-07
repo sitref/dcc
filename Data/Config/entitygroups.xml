@@ -223,7 +223,7 @@
 		<entity name="zombieFatHawaiianFeral" prob="0.01" />
 		<entity name="zombieFatHawaiianFeralRadiated" prob="0.005" />
 		<entity name="animalZombieBear" />
-		<entity name="animalZombieBearrad" />
+		<entity name="trollunyaBear" />
 		<entity name="zombieWightFeral" />
 		<entity name="zombieWightFeralRadiated" />
 	</entitygroup>
@@ -371,7 +371,7 @@
 		<entity name="animalZombieDog" prob="0.03"/>
 		<entity name="animalZombieDograd" prob="0.03"/>
 		<entity name="animalZombieBear" prob="0.03"/>
-		<entity name="animalZombieBearrad" prob="0.03"/>
+		<entity name="trollunyaBear" prob="0.03"/>
 		<entity name="zombieSteveCrawlerFeral" />
 		<entity name="zombieSteveCrawlerRadiated" prob="0.03" />
 		<entity name="zombieSteveCrawlerFeral" prob="0.01" />
@@ -495,7 +495,7 @@
 
 	<entitygroup name="ZombiesCave">
 		<entity name="animalBear" prob="0.1"/>
-		<entity name="animalBearrad" prob="0.03" />
+		<entity name="cerunyabear" prob="0.03" />
 		<entity name="zombieSteveCrawlerFeral" />
 		<entity name="zombieSteveCrawlerRadiated" prob="0.03" />
 		<entity name="zombieSteveCrawlerFeral" prob="0.01" />
@@ -510,19 +510,22 @@
 	<entitygroup name="AnimalsSmall">
 		<entity name="animalRabbit" />
 		<entity name="animalkillerRabbit" prob="0.001"/>
-		<entity name="animalChicken" />
+			<entity name="animalChicken" />
+			<entity name="deedchicken" />
 	</entitygroup>
 
 	<entitygroup name="AnimalsFarm">
 		<entity name="animalBoar" />
-		<entity name="animalBoarrad" />
+		<entity name="lejaBoar" />
 		<entity name="animalChicken" />
+		<entity name="deedchicken" />
 	</entitygroup>
 
 	<entitygroup name="AnimalsDesert">
 		<entity name="animalRabbit" />
 		<entity name="animalkillerRabbit" prob="0.001"/>
 		<entity name="animalChicken" />
+		<entity name="deedchicken" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsDesert">
@@ -539,8 +542,9 @@
 		<entity name="animalRabbit" />
 		<entity name="animalkillerRabbit" prob="0.001"/>
 		<entity name="animalChicken" />
+		<entity name="deedchicken" />
 		<entity name="animalBoar" prob="0.4" />
-		<entity name="animalBoarrad" prob="0.2" />
+		<entity name="lejaBoar" prob="0.2" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsSnow">
@@ -549,9 +553,9 @@
 		<entity name="animalZombieVulturerad" prob="0.2" />
 		<entity name="animalZombieVulturescout" prob="0.2" />
 		<entity name="animalDireWolf" prob="0.03" />
-		<entity name="animalDireWolfrad" prob="0.01" />
+		<entity name="invisibleWolf" prob="0.01" />
 		<entity name="animalBear" prob="0.03" />
-		<entity name="animalBearrad" prob="0.01" />
+		<entity name="cerunyabear" prob="0.01" />
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsSnow">
@@ -559,18 +563,19 @@
 		<entity name="animalRabbit" />
 		<entity name="animalkillerRabbit" prob="0.001"/>
 		<entity name="animalBoar" prob="0.4" />
-		<entity name="animalBoarrad" prob="0.2" />
+		<entity name="lejaBoar" prob="0.2" />
 		<entity name="animalStag" prob="0.6" />
+		<entity name="SutriStag" prob="0.3" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsForest">
 		<entity name="invisibleAnimalEnemy" prob="6" />
 		<entity name="animalWolf" prob="0.4" />
-		<entity name="animalWolfrad" prob="0.2" />
+		<entity name="macWolf" prob="0.2" />
 		<entity name="animalBear" prob="0.03" />
-		<entity name="animalBearrad" prob="0.01" />
+		<entity name="cerunyabear" prob="0.01" />
 		<entity name="animalDireWolf" prob="0.03" />
-		<entity name="animalDireWolfrad" prob="0.01" />
+		<entity name="invisibleWolf" prob="0.01" />
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsForest">
@@ -578,8 +583,9 @@
 		<entity name="animalRabbit" />
 		<entity name="animalkillerRabbit" prob="0.001"/>
 		<entity name="animalBoar" prob="0.4" />
-		<entity name="animalBoarrad" prob="0.2" />
+		<entity name="lejaBoar" prob="0.2" />
 		<entity name="animalStag" prob="0.6" />
+		<entity name="SutriStag" prob="0.3" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsBurntForest">
@@ -593,9 +599,12 @@
 	<entitygroup name="FriendlyAnimalsBurntForest">
 		<entity name="invisibleAnimal" prob="5" />
 		<entity name="animalChicken" />
+		<entity name="deedchicken" />
 		<entity name="animalStag" prob="0.6" />
+		<entity name="SutriStag" prob="0.3" />
+		<entity name="SutriStag" prob="0.3" />
 		<entity name="animalBoar" prob="0.4" />
-		<entity name="animalBoarrad" prob="0.2" />
+		<entity name="lejaBoar" prob="0.2" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsPlains">
@@ -606,7 +615,7 @@
 		<entity name="animalSnake" />
 		<entity name="animalSnakerad"  prob="0.03"/>
 		<entity name="animalWolf" />
-		<entity name="animalWolfrad" prob="0.7" />
+		<entity name="macWolf" prob="0.7" />
 	</entitygroup>
 
 	<entitygroup name="FriendlyAnimalsPlains">
@@ -614,8 +623,9 @@
 		<entity name="animalRabbit" />
 		<entity name="animalkillerRabbit" prob="0.001"/>
 		<entity name="animalChicken" />
+		<entity name="deedchicken" />
 		<entity name="animalBoar" />
-		<entity name="animalBoarrad" />
+		<entity name="lejaBoar" />
 		<entity name="animalStag" />
 	</entitygroup>
 
@@ -623,20 +633,21 @@
 		<entity name="animalRabbit" />
 		<entity name="animalkillerRabbit" prob="0.001"/>
 		<entity name="animalChicken" />
+		<entity name="deedchicken" />
 		<entity name="animalStag" />
 		<entity name="animalBoar" />
-		<entity name="animalBoarrad" />
+		<entity name="lejaBoar" />
 		<entity name="animalSnake" />
 		<entity name="animalSnakerad"  prob="0.03"/>
 		<entity name="animalZombieVulture" />
 		<entity name="animalZombieVulturerad" prob="0.5" />
 		<entity name="animalZombieVulturescout" prob="0.5" />
 		<entity name="animalWolf" />
-		<entity name="animalWolfrad" prob="0.5" />
+		<entity name="macWolf" prob="0.5" />
 		<entity name="animalDireWolf" prob="0.2" />
-		<entity name="animalDireWolfrad" prob="0.1" />
+		<entity name="invisibleWolf" prob="0.1" />
 		<entity name="animalBear" prob="0.2" />
-		<entity name="animalBearrad" prob="0.1" />
+		<entity name="cerunyabear" prob="0.1" />
 	</entitygroup>
 
 	<entitygroup name="EnemyAnimalsWasteland" >
@@ -657,14 +668,14 @@
 
 	<entitygroup name="WolfGroup">
 		<entity name="animalWolf" />
-		<entity name="animalWolfrad" prob="0.5" />
+		<entity name="macWolf" prob="0.5" />
 	</entitygroup>
 
 	<entitygroup name="WolfPack">
 		<entity name="animalWolf" />
-		<entity name="animalWolfrad" prob="0.7" />
+		<entity name="macWolf" prob="0.7" />
 		<entity name="animalDireWolf" prob="0.5" />
-		<entity name="animalDireWolfrad" prob="0.01" />
+		<entity name="invisibleWolf" prob="0.01" />
 	</entitygroup>
 
 	<entitygroup name="VultureGroup">
@@ -735,8 +746,9 @@
 		<entity name="animalZombieDog" />
 		<entity name="animalZombieDograd" />
 		<entity name="animalBoar" />
-		<entity name="animalBoarrad" />						
+		<entity name="lejaBoar" />						
 		<entity name="animalChicken" />
+		<entity name="deedchicken" />
 		<entity name="zombieFarmer" />
 	</entitygroup>
 
@@ -826,12 +838,12 @@
 		<entity name="animalZombieDog"  prob="4"/>
 		<entity name="animalZombieDograd"  prob="2"/>
 		<entity name="animalZombieBear" />
-		<entity name="animalZombieBearrad" prob="0.5" /> 
+		<entity name="trollunyaBear" prob="0.5" /> 
 	</entitygroup>
 
 	<entitygroup name="ZombieBearsGroup">
 		<entity name="animalZombieBear" />
-		<entity name="animalZombieBearrad" prob="0.5" />
+		<entity name="trollunyaBear" prob="0.5" />
 	</entitygroup>
 
 	<entitygroup name="BanditGroup">

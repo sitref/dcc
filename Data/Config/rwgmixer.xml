@@ -3,7 +3,7 @@
 	<world ruleset="vanilla" />
 
 	<rulesets>
-		<ruleset name="vanilla" cell_cache_size="8" cell_size="1400" cell_offset="0" generation_distance="9000" terrain_generator="vanilla" biome_generator="vanilla">
+		<ruleset name="vanilla" cell_cache_size="8" cell_size="1350" cell_offset="0" generation_distance="9000" terrain_generator="vanilla" biome_generator="vanilla">
 			<cell_rule name="default" prob="1"/>
 			<!--<cell_rule name="customHubTest" position="0,1" prob="0"/>-->
 		</ruleset>
@@ -15,9 +15,9 @@
 			<path_material value="asphalt" />
 			<path_radius value="5" />
 
-			<hub_rule name="townSmall" prob="0.5"/>
-			<hub_rule name="townLarge" prob="0.5"/>
-			<hub_rule name="citySmall" prob="0.4"/>
+			<hub_rule name="townSmall" prob="0.7"/>
+			<hub_rule name="townLarge" prob="0.6"/>
+			<hub_rule name="citySmall" prob="0.5"/>
 			<hub_rule name="cityLarge" prob="0.4"/>
 			<hub_rule name="rural" prob="0.5"/>
 
