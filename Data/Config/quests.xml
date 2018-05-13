@@ -138,6 +138,8 @@
 		<objective type="BlockPlace" id="workbench" value="1" />
 
 		<reward type="SkillPoints" value="6" />
+		
+		 </quest>
 	<!--	<reward type="Quest" id="write" /> 
 		<reward type="Quest" id="quest_BasicSurvival11" /> 
     </quest>
