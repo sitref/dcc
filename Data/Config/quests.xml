@@ -139,7 +139,7 @@
 
 		<reward type="SkillPoints" value="6" />
 	<!--	<reward type="Quest" id="write" /> 
-		<reward type="Quest" id="quest_BasicSurvival11" /> -->
+		<reward type="Quest" id="quest_BasicSurvival11" /> 
     </quest>
 
 	<quest id="quest_BasicSurvival11" group_name_key="quest_BasicSurvival" name_key="quest_BasicSurvival11" subtitle_key="quest_BasicSurvival11_subtitle" description_key="quest_BasicSurvival11_description" icon="ui_game_symbol_campfire" category_key="quest" difficulty="easy">
@@ -167,7 +167,7 @@
 		
 		<reward type="SkillPoints" value="2" />
     </quest>
-	
+	-->
 	<!-- White River Citizen 1 - Journey to Settlement -->
 	<quest id="quest_whiteRiverCitizen1" group_name_key="quest_WhiteRiverCitizen" name_key="quest_WhiteRiverCitizen1" subtitle_key="quest_WhiteRiverCitizen1_subtitle" description_key="quest_WhiteRiverCitizen1_description" icon="ui_game_symbol_map_trader" category_key="quest" difficulty="medium">
 		<objective type="Goto" id="trader" value="5" />
