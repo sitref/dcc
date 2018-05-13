@@ -140,7 +140,7 @@
 		<reward type="SkillPoints" value="6" />
 		
 		 </quest>
-	<!--	<reward type="Quest" id="write" /> 
+		<reward type="Quest" id="write" /> 
 		<reward type="Quest" id="quest_BasicSurvival11" /> 
     </quest>
 
@@ -165,11 +165,11 @@
 		<objective type="FetchKeep" id="paper" value="128" />
 		<objective type="Craft" id="emptyBook" value="2" />
 		<objective type="FetchKeep" id="feather" value="5" />
-		<objective type="Craft" id="self-writtenBook" value="1" />
+		<objective type="Craft" id="selfwrittenBook" value="1" />
 		
 		<reward type="SkillPoints" value="2" />
     </quest>
-	-->
+
 	<!-- White River Citizen 1 - Journey to Settlement -->
 	<quest id="quest_whiteRiverCitizen1" group_name_key="quest_WhiteRiverCitizen" name_key="quest_WhiteRiverCitizen1" subtitle_key="quest_WhiteRiverCitizen1_subtitle" description_key="quest_WhiteRiverCitizen1_description" icon="ui_game_symbol_map_trader" category_key="quest" difficulty="medium">
 		<objective type="Goto" id="trader" value="5" />

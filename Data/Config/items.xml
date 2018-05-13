@@ -9203,7 +9203,7 @@ Mesh files no longer used:
 	</property>
 </item>
 
-<item id="1161" name="self-writtenBook">
+<item id="1161" name="selfwrittenBook">
 	<property name="Extends" value="questMaster"/>
 	<property class="Action1">
 		<property name="QuestGiven" value="BookWriting"/>

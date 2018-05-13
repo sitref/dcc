@@ -3261,7 +3261,7 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="paper" count="64"/>
 </recipe>
 
-<recipe name="self-writtenBook" count="1">
+<recipe name="selfwrittenBook" count="1">
 	<ingredient name="emptyBook" count="2"/>
 	<ingredient name="newsprint" count="3"/>
 	<ingredient name="feather" count="5"/>

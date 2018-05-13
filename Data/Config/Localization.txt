@@ -1502,7 +1502,7 @@ vegetableStewDesc,items,Food,KgNone,Your mom always said eat your vegetables. No
 blunderbuss,items,Gun,KgNone,Blunderbuss,Tromblon,Donnerbüchse,,Trabuco
 crossbow,items,Gun,KgNone,Crossbow,Arbalète,Armbrust,,Ballesta
 crossbowscope,items,Gun,KgNone,Crossbow with scope,Arbalète,Armbrust mitt Zielfernrohr,,Ballesta
-extMagazineCbow,items,Gun,KgNone,Crossbow extended mag,Arbalète,Armbrust erweitertes Magazin,,Ballesta
+extMagazineCbow,items,Gun,KgNone,Crossbow extended Mag,Arbalète,Armbrust erweitertes Magazin,,Ballesta
 crossbowDesc,items,Gun,KgNone,A crossbow does more damage than a wooden bow. Good for hunting and not making noise. Hold reload to use alternate ammo.,"Une arbalète inflige plus de dégâts qu'un arc en bois. Idéale pour la chasse, cette arme ne fait pas de bruit. Maintenez le bouton de rechargement enfoncé pour utiliser un autre type de munition.","Eine Armbrust verursacht mehr Schaden als ein Holzbogen. Eignet sich gut dazu, geräuschlos zu jagen. Nachladen gedrückt halten, um zwischen Munitionsarten zu wechseln.",,Una ballesta inflige más daño que un arco de madera. Es buena para cazar y no hacer ruido. Mantén presionado recargar para usar munición alternativa.
 dynamite,items,Gun,EnChanged,Stick of Dynamite (Ammo),Bâton de dynamite,Dynamitstange (Mun),,Cartucho de dinamita
 dynamiteDesc,items,Gun,KgNone,A stick of dynamite can be lit with the secondary action & thrown with the primary action. The throwing part is very important.,Le bâton de dynamite peut être allumé avec l'action secondaire et jeté avec l'action principale. Le lancer est primordial.,Eine Dynamitstange kann mit der sekundären Aktion gezündet und mit der primären Aktion geworfen werden. Der Teil mit dem Werfen ist besonders wichtig.,,"Se puede prender un cartucho de dinamita con la acción secundaria, y lanzarlo con la acción primaria. Es muy importante lanzarlo."
@@ -4310,7 +4310,7 @@ ttRepairBeforePickup,UI,Tooltip,New,You must repair this before picking it up.,,
 electricBasicsName,progression,Perk,New,Electricity Basics,,,,
 electricBasicsDesc,progression,Perk,New,This perk will unlock recipes for electrical devices.,,,,
 BookWritingName,progression,Perk,New,Learn to make Books and ink,,,,
-BookWritingDesc,progression,Perk,New,This perk will unlock recipes for Self-written Books.,,,,
+BookWritingDesc,progression,Perk,New,This perk will unlock recipes for Selfwritten Books.,,,,
 electricTriggersName,progression,Perk,New,Switches and Triggers,,,,
 electricTriggersDesc,progression,Perk,New,This perk will unlock recipes for electrical devices.,,,,
 electricTrapsMeleeName,progression,Perk,New,Melee Traps,,,,
@@ -4983,7 +4983,7 @@ fruitBrandDesc,items,item,KgNone,Here's to us and here's to them. f*** them - he
 Schmidtbier,items,item,KgNone,Schmidtbier,,Schmidtbier,,
 SchmidtbierDesc,items,item,KgNon,Only available at the Schmidtbar,,Nur in der Schmidtbar erhältlich,,
 MacceruTea,items,item,KgNone,Macceru Tea,,Macceru Tee,,
-MacceruTeaDesc,items,item,KgNon,it's cold!Let's drink red tea! ,,Es ist kalt!Lass uns roten Tee trinken-roter Tee wärmt doch,,
+MacceruTeaDesc,items,item,KgNon,"it's cold! Let's drink red tea!",,"Es ist kalt! Lass uns roten Tee trinken - roter Tee wärmt doch",,
 ActofPolishing,items,Book,New,Act of Polishing,,Richtig Polieren,,
 ActofPolishingDesc,items,Book,New,Read this book to learn how to polish your Steeltools.,,Lerne dein Stahlwerkzeug zu polieren,,
 simpleWeaponImprovements,items,Book,simple Weapon improvements,,einfache Waffenverbesserungen,,
