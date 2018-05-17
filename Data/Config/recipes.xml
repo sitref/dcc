@@ -3280,6 +3280,33 @@ Unfortunately auto-calc only seems to work on the first (top) ingredient in the 
 	<ingredient name="oil" count="3" />
 </recipe>
 
+<recipe name="coal" count="3" craft_area="chemistryStation" >
+	<ingredient name="wood" count="10"/>
+</recipe>
+
+<recipe name="coal" count="1" craft_area="campfire" craft_tool="beaker" >
+	<ingredient name="wood" count="10"/>
+</recipe>
+
+
+<recipe name="waterFilter" count="1">
+	<ingredient name="coal"		count="1" />
+	<ingredient name="yuccaFibers" 	count="10"/>
+	<ingredient name="crushedSand"  count="3" />
+</recipe>
+
+<recipe name="selfmadeFilterBottle" count="1">
+	<ingredient name="megaCrush" 	count="1" />
+	<ingredient name="leather"    	count="1" />
+	<ingredient name="yuccaFibers"	count="1" />
+	<ingredient name="waterFilter"	count="1" />
+</recipe>
+
+<recipe name="selfmadeFilterBottle" count="1">
+	<ingredient name="usedFilterBottle" count="1" />
+	<ingredient name="waterFilter"	count="1" />
+</recipe>
+
 
 </recipes>
 
