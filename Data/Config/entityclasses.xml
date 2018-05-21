@@ -1094,6 +1094,7 @@
 	<property name="SoundSense" value="Enemies/Acid_Puking_Hulk/hulksense"/>
 	<property name="SoundFootstepModifier" value="Animals/Bear/bear_footstep"/>
 	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="RightHandJointName" value="Jaw"/>
 	<property name="ModelType" value="Standard"/>
 	<property name="WalkType" value="1"/>
 	<property name="HandItem" value="handZombieCop"/>
